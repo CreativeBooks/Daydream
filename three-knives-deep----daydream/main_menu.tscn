@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvlgjrm207tyt"]
+[gd_scene load_steps=9 format=3 uid="uid://dvlgjrm207tyt"]
 
 [ext_resource type="Texture2D" uid="uid://bum1to64tlwll" path="res://images/5ycaeP.jpg" id="1_7vrkn"]
 [ext_resource type="Script" uid="uid://dj5fycc6aqwhx" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://cptdqc2uo1o78" path="res://Assests/GolfClubHomicide-51azG.ttf" id="2_fu7sn"]
+[ext_resource type="AudioStream" uid="uid://bhmelmqtkb53a" path="res://Assests/Best Dramatic music ever!!.mp3" id="4_jix8l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
 texture = ExtResource("1_7vrkn")
@@ -131,6 +132,10 @@ theme_override_fonts/font = ExtResource("2_fu7sn")
 theme_override_font_sizes/font_size = 150
 text = "3 Knives Deep"
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_jix8l")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
