@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://dkxj6blfgxfwr"]
+
+[ext_resource type="Script" uid="uid://dlx5b8lvj8j3n" path="res://control.gd" id="1_qtu10"]
+[ext_resource type="Texture2D" uid="uid://bum1to64tlwll" path="res://images/5ycaeP.jpg" id="2_ee4bf"]
+[ext_resource type="FontFile" uid="uid://d2auih0xpwvdw" path="res://Assests/Stroke-082d.ttf" id="3_kbped"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fj5cn"]
+texture = ExtResource("2_ee4bf")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iy58a"]
+bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.82163996, 0, 0.025397828, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6a6wx"]
+bg_color = Color(0.7792914, 0.7792914, 0.7792912, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sky72"]
+bg_color = Color(0.3366076, 0.33660764, 0.33660752, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qtu10")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_fj5cn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 84.0
+offset_right = 1118.0
+offset_bottom = 436.0
+theme_override_constants/shadow_offset_x = 14
+theme_override_fonts/font = ExtResource("3_kbped")
+theme_override_font_sizes/font_size = 40
+text = "You are the owner of a hotel. Suddenly, you are given a notice to shut down the hotel OR murder three specific people to keep his hotel open.  You are given 5 lives to attempt to kill your people and keep your hotel or its GONE!!! Keep the doors open. Kill three. You’ve got five lives—use them or lose it all. Let the hunt begin!"
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 466.0
+offset_right = 720.0
+offset_bottom = 566.0
+theme_override_constants/separation = 11
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6a6wx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sky72")
+text = "Start"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_iy58a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6a6wx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sky72")
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_start_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_3_pressed"]
