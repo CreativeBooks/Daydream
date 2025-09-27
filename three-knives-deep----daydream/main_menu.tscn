@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvlgjrm207tyt"]
+[gd_scene load_steps=8 format=3 uid="uid://dvlgjrm207tyt"]
 
 [ext_resource type="Texture2D" uid="uid://bum1to64tlwll" path="res://images/5ycaeP.jpg" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://dj5fycc6aqwhx" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://cptdqc2uo1o78" path="res://Assests/GolfClubHomicide-51azG.ttf" id="2_fu7sn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
@@ -38,6 +39,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fu7sn")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -128,3 +130,7 @@ theme_override_fonts/font = ExtResource("2_fu7sn")
 theme_override_font_sizes/font_size = 150
 text = "3 Knives Deep"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
