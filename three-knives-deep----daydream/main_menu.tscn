@@ -9,6 +9,7 @@ texture = ExtResource("1_7vrkn")
 modulate_color = Color(0.4006977, 0.40069774, 0.40069756, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
+bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -64,9 +65,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -136.0
-offset_top = -73.0
+offset_top = -23.0
 offset_right = 136.0
-offset_bottom = 73.0
+offset_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
@@ -74,7 +75,7 @@ theme_override_constants/separation = 10
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.06537829, 0.0099125495, 0.012830557, 1)
+theme_override_colors/font_color = Color(0.9557741, 0.78910303, 0.7782603, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -87,7 +88,7 @@ text = "Start Game"
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.06537829, 0.0099125495, 0.012830557, 1)
+theme_override_colors/font_color = Color(0.9557741, 0.78910303, 0.7782603, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -100,7 +101,7 @@ text = "Options"
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.06537829, 0.0099125495, 0.012830557, 1)
+theme_override_colors/font_color = Color(0.9557741, 0.78910303, 0.7782603, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
