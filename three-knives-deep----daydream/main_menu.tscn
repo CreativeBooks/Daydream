@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cvxevd5vb5bh2" path="res://OliclothByTheYard_Solids_White.webp" id="1_jix8l"]
 [ext_resource type="Texture2D" uid="uid://1lt0oi81vcjb" path="res://images/Hotel background wall.png" id="2_jix8l"]
 [ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="3_nlkkf"]
-[ext_resource type="Texture2D" uid="uid://bvgxnfsc8huvk" path="res://icon.svg" id="4_qe12f"]
+[ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="4_jix8l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vw27"]
 texture = ExtResource("1_jix8l")
@@ -1573,7 +1573,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5vw27")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
-size = Vector2(134, 135)
+size = Vector2(213, 309.5)
 
 [node name="Node" type="Node"]
 
@@ -1596,12 +1596,12 @@ texture = ExtResource("2_jix8l")
 script = ExtResource("3_nlkkf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(64, 583)
+position = Vector2(100.5, 478.25)
 shape = SubResource("RectangleShape2D_4c57u")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(65, 584)
-texture = ExtResource("4_qe12f")
+position = Vector2(106, 478)
+texture = ExtResource("4_jix8l")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(577, 349)
