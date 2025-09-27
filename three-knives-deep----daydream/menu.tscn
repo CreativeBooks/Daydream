@@ -15,7 +15,7 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-shadow_color = Color(1, 0.827451, 0.8, 1)
+shadow_color = Color(0.82163996, 0, 0.025397828, 1)
 shadow_size = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
@@ -76,7 +76,7 @@ theme_override_constants/separation = 10
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.9557741, 0.78910303, 0.7782603, 1)
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -89,7 +89,7 @@ text = "Start Game"
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.9557741, 0.78910303, 0.7782603, 1)
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -102,7 +102,7 @@ text = "Options"
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.9557741, 0.78910303, 0.7782603, 1)
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
