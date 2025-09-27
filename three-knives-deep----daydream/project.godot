@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Three Knives Deep  - Daydream"
-run/main_scene="uid://dyfepsdy3oall"
+run/main_scene="uid://c24kciy5tlf0o"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 

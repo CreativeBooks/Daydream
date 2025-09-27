@@ -4,6 +4,11 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+const LIMIT_LEFT = 0
+const LIMIT_RIGHT = 1700
+const LIMIT_TOP = -10000000000000
+const LIMIT_BOTTOM = 672
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -23,3 +28,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+	# Clamp position to stay within limits
+	position.x = clamp(position.x, LIMIT_LEFT, LIMIT_RIGHT)
+	position.y = clamp(position.y, LIMIT_TOP, LIMIT_BOTTOM)
