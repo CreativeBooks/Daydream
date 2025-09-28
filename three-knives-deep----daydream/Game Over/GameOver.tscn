@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://co4j4m4al4dxb"]
+
+[ext_resource type="Texture2D" uid="uid://bum1to64tlwll" path="res://images/5ycaeP.jpg" id="1_nkfid"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c4c13"]
+texture = ExtResource("1_nkfid")
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1149.0
+offset_bottom = 653.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_c4c13")
