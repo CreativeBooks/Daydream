@@ -7,7 +7,5 @@ func _on_button_2_pressed():
 
 
 func _on_button_3_1_pressed():
-	GameState.register_button("page1_btn1")
-	
 	get_tree().change_scene_to_file("res://Level 1/sacrifice.tscn")
 	

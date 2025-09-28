@@ -69,3 +69,6 @@ text = "Supernatural
 Activity Prevent
 Guests From
 Checking-In"
+
+[connection signal="pressed" from="Sacrifice/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Sacrifice/Button3" to="." method="_on_button_3_pressed"]
