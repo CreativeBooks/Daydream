@@ -1,14 +1,14 @@
-[gd_scene load_steps=11 format=4 uid="uid://bf5i66b7iyk4h"]
+[gd_scene load_steps=14 format=4 uid="uid://dihsxlg4srd35"]
 
-[ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="1_v4cwh"]
-[ext_resource type="Script" uid="uid://8wguovq3e762" path="res://Level 1/riddle_2.gd" id="1_wb680"]
-[ext_resource type="Texture2D" uid="uid://dh4f7g3t8yhr2" path="res://images/Background.png" id="2_wb680"]
-[ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="3_1u4gb"]
-[ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="4_kp8pn"]
-[ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="5_14ki7"]
+[ext_resource type="Script" uid="uid://bohg3oc5bpsw8" path="res://Level 3/3_main_menu_l_3.gd" id="1_s6or2"]
+[ext_resource type="Texture2D" uid="uid://eawjrcom7o7m" path="res://images/wall3.png" id="2_s6or2"]
+[ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="3_t58h4"]
+[ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="4_dh48e"]
+[ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="5_n2agv"]
+[ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="6_tvy8c"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4cwh"]
-texture = ExtResource("1_v4cwh")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wl4tp"]
+texture = ExtResource("3_t58h4")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -460,45 +460,84 @@ texture = ExtResource("1_v4cwh")
 14:14/0 = 0
 14:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_bdhm5"]
+[sub_resource type="TileSet" id="TileSet_27enq"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_v4cwh")
+sources/0 = SubResource("TileSetAtlasSource_wl4tp")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqjxu"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55rdi"]
+bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.82163996, 0, 0.025397828, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sj0c3"]
+bg_color = Color(0.7792914, 0.7792914, 0.7792912, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_52xqc"]
+bg_color = Color(0.3366076, 0.33660764, 0.33660752, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7asoi"]
 size = Vector2(155, 208.1875)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1u4gb"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kco0"]
 size = Vector2(131, 89)
 
 [node name="Node" type="Node"]
-script = ExtResource("1_wb680")
+script = ExtResource("1_s6or2")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(571.00006, 289.5)
-scale = Vector2(2.070909, 2.5147057)
-texture = ExtResource("2_wb680")
+position = Vector2(571.00006, 296.5)
+scale = Vector2(2.070909, 2.4558825)
+texture = ExtResource("2_s6or2")
 
 [node name="Background2" type="Sprite2D" parent="."]
-position = Vector2(1687.9999, 288.5)
-scale = Vector2(2.070909, 2.5088236)
-texture = ExtResource("2_wb680")
+position = Vector2(1687.9999, 297)
+scale = Vector2(2.070909, 2.4588234)
+texture = ExtResource("2_s6or2")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)
-tile_map_data = PackedByteArray("AAAfAA0AAAAKAAcAAAAeAA0AAAAKAAcAAAAdAA0AAAAKAAcAAAAbAA0AAAAKAAcAAAAcAA0AAAAKAAcAAAAAAA0AAAAKAAcAAAAEAA0AAAAKAAcAAAAFAA0AAAAKAAcAAAAGAA0AAAAKAAcAAAAHAA0AAAAKAAcAAAAIAA0AAAAKAAcAAAABAA0AAAAKAAcAAAACAA0AAAAKAAcAAAADAA0AAAAKAAcAAAAAAA4AAAAKAAcAAAABAA4AAAAKAAcAAAACAA4AAAAKAAcAAAADAA4AAAAKAAcAAAAEAA4AAAAKAAcAAAAFAA4AAAAKAAcAAAAGAA4AAAAKAAcAAAAHAA4AAAAKAAcAAAAIAA4AAAAKAAcAAAAbAA4AAAAKAAcAAAAcAA4AAAAKAAcAAAAdAA4AAAAKAAcAAAAeAA4AAAAKAAcAAAAfAA4AAAAKAAcAAAAgAA0AAAAKAAcAAAAgAA4AAAAKAAcAAAAiAA4AAAAKAAcAAAAiAA0AAAAKAAcAAAAhAA0AAAAKAAcAAAAhAA4AAAAKAAcAAAAkAA4AAAAKAAcAAAAjAA4AAAAKAAcAAAAjAA0AAAAKAAcAAAAkAA0AAAAKAAcAAAAmAA4AAAAKAAcAAAAlAA4AAAAKAAcAAAAlAA0AAAAKAAcAAAAmAA0AAAAKAAcAAAAnAA4AAAAKAAcAAAAoAA4AAAAKAAcAAAApAA4AAAAKAAcAAAAqAA4AAAAKAAcAAAAnAA0AAAAKAAcAAAAoAA0AAAAKAAcAAAApAA0AAAAKAAcAAAAqAA0AAAAKAAcAAAArAA0AAAAKAAcAAAAsAA0AAAAKAAcAAAAsAA4AAAAKAAcAAAArAA4AAAAKAAcAAAAtAA0AAAAKAAcAAAAuAA0AAAAKAAcAAAAuAA4AAAAKAAcAAAAtAA4AAAAKAAcAAAAKAAsAAAAEAAEAAAALAAsAAAAEAAEAAAAMAAsAAAAEAAEAAAAOAAkAAAAEAAEAAAAPAAkAAAAEAAEAAAAQAAkAAAAEAAEAAAASAAcAAAAEAAEAAAATAAcAAAAEAAEAAAAUAAcAAAAEAAEAAAAVAAcAAAAEAAEAAAAXAAkAAAAEAAEAAAAYAAkAAAAEAAEAAAAZAAkAAAAEAAEAAAAZAAsAAAAEAAEAAAAaAAsAAAAEAAEAAAAbAAsAAAAEAAEAAAA=")
-tile_set = SubResource("TileSet_bdhm5")
+tile_map_data = PackedByteArray("AAAAAA0AAAAKAAcAAAAEAA0AAAAKAAcAAAAFAA0AAAAKAAcAAAAGAA0AAAAKAAcAAAAHAA0AAAAKAAcAAAAIAA0AAAAKAAcAAAAJAA0AAAAKAAcAAAABAA0AAAAKAAcAAAACAA0AAAAKAAcAAAADAA0AAAAKAAcAAAAAAA4AAAAKAAcAAAABAA4AAAAKAAcAAAACAA4AAAAKAAcAAAADAA4AAAAKAAcAAAAEAA4AAAAKAAcAAAAFAA4AAAAKAAcAAAAGAA4AAAAKAAcAAAAHAA4AAAAKAAcAAAAIAA4AAAAKAAcAAAAJAA4AAAAKAAcAAAAnAA4AAAAKAAcAAAAoAA4AAAAKAAcAAAApAA4AAAAKAAcAAAAqAA4AAAAKAAcAAAAnAA0AAAAKAAcAAAAoAA0AAAAKAAcAAAApAA0AAAAKAAcAAAAqAA0AAAAKAAcAAAArAA0AAAAKAAcAAAAsAA0AAAAKAAcAAAAsAA4AAAAKAAcAAAArAA4AAAAKAAcAAAAtAA0AAAAKAAcAAAAuAA0AAAAKAAcAAAAuAA4AAAAKAAcAAAAtAA4AAAAKAAcAAAAJABAAAAACAAMAAAAKABAAAAACAAMAAAALABAAAAACAAMAAAAMABAAAAACAAMAAAANABAAAAACAAMAAAAOABAAAAACAAMAAAAPABAAAAACAAMAAAAQABAAAAACAAMAAAARABAAAAACAAMAAAASABAAAAACAAMAAAATABAAAAACAAMAAAAUABAAAAACAAMAAAAVABAAAAACAAMAAAAWABAAAAACAAMAAAAXABAAAAACAAMAAAAYABAAAAACAAMAAAAZABAAAAACAAMAAAAaABAAAAACAAMAAAAbABAAAAACAAMAAAAcABAAAAACAAMAAAAdABAAAAACAAMAAAAeABAAAAACAAMAAAAfABAAAAACAAMAAAAgABAAAAACAAMAAAAhABAAAAACAAMAAAAiABAAAAACAAMAAAAjABAAAAACAAMAAAAkABAAAAACAAMAAAAlABAAAAACAAMAAAAmABAAAAACAAMAAAAMAAsAAAACAAMAAAAPAAgAAAACAAMAAAATAAUAAAACAAMAAAAXAAMAAAACAAMAAAAcAAMAAAACAAMAAAAgAAUAAAACAAMAAAAkAAgAAAACAAMAAAA=")
+tile_set = SubResource("TileSet_27enq")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1908.0
+offset_top = 535.0
+offset_right = 2103.0
+offset_bottom = 591.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_55rdi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sj0c3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_52xqc")
+text = "Decision Time"
 
 [node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("4_kp8pn")
+script = ExtResource("4_dh48e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(310, 523)
-shape = SubResource("RectangleShape2D_lqjxu")
+position = Vector2(360, 530)
+shape = SubResource("RectangleShape2D_7asoi")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(307, 520.99994)
+position = Vector2(360.99994, 529.99994)
 scale = Vector2(0.7291666, 0.66999996)
-texture = ExtResource("5_14ki7")
+texture = ExtResource("5_n2agv")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(577, 349)
@@ -507,24 +546,24 @@ limit_top = -50
 limit_right = 2154
 limit_bottom = 672
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(652, -7)
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(-689, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(824.5, 565.5)
-shape = SubResource("RectangleShape2D_1u4gb")
+shape = SubResource("RectangleShape2D_3kco0")
 
-[node name="Button" type="Button" parent="Area2D"]
+[node name="Button" type="Button" parent="Area2D2"]
 offset_left = 759.0
 offset_top = 517.0
 offset_right = 896.0
 offset_bottom = 613.0
-icon = ExtResource("3_1u4gb")
+icon = ExtResource("6_tvy8c")
 autowrap_trim_flags = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Area2D/Button"]
+[node name="Label" type="Label" parent="Area2D2/Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -540,41 +579,6 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.023529412, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 text = "Click Me for Your Second Riddle!!!"
-metadata/_edit_use_anchors_ = true
 
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(-689, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(824.5, 565.5)
-shape = SubResource("RectangleShape2D_1u4gb")
-
-[node name="Button" type="Button" parent="Area2D2"]
-offset_left = 759.0
-offset_top = 517.0
-offset_right = 896.0
-offset_bottom = 613.0
-icon = ExtResource("3_1u4gb")
-autowrap_trim_flags = 0
-expand_icon = true
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="Area2D2/Button"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -119.0
-offset_top = -76.0
-offset_right = 117.0
-offset_bottom = 49.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.023529412, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-text = "Click Me for Your First Riddle!!!"
-metadata/_edit_use_anchors_ = true
-
-[connection signal="pressed" from="Area2D/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Area2D2/Button" to="." method="_on_button_pressed"]

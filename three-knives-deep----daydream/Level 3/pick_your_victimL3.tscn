@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://caa2tws554ow5"]
+
+[ext_resource type="Script" uid="uid://cav7i0sqhdj6" path="res://Level 3/pick_your_victim_l_3.gd" id="1_fofqn"]
+[ext_resource type="Texture2D" uid="uid://ofpi6yswusrp" path="res://images/Pick Your Victim 3.png" id="2_1ii40"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prtpt"]
+texture = ExtResource("2_1ii40")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_woyds"]
+bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.82163996, 0, 0.025397828, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dk3i"]
+bg_color = Color(0.7792914, 0.7792914, 0.7792912, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_voni1"]
+bg_color = Color(0.3366076, 0.33660764, 0.33660752, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="PickYourVictim" type="Node2D"]
+script = ExtResource("1_fofqn")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1148.0
+offset_bottom = 651.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_prtpt")
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 752.0
+offset_top = 565.0
+offset_right = 938.0
+offset_bottom = 617.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_woyds")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8dk3i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_voni1")
+text = "Security Guard"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 200.0
+offset_top = 558.0
+offset_right = 386.0
+offset_bottom = 616.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_woyds")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8dk3i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_voni1")
+text = "Cleaner"
+
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
