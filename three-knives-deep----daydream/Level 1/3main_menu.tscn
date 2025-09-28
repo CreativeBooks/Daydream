@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://wekkcdbucth8"]
+[gd_scene load_steps=14 format=4 uid="uid://wekkcdbucth8"]
 
+[ext_resource type="Script" uid="uid://cn8p1i5n5s0ks" path="res://Level 1/3_main_menu.gd" id="1_espcj"]
 [ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="1_oqie6"]
 [ext_resource type="Texture2D" uid="uid://dh4f7g3t8yhr2" path="res://images/Background.png" id="2_espcj"]
 [ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="3_55rdi"]
@@ -463,6 +464,29 @@ texture = ExtResource("1_oqie6")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wl4tp")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55rdi"]
+bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.82163996, 0, 0.025397828, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sj0c3"]
+bg_color = Color(0.7792914, 0.7792914, 0.7792912, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_52xqc"]
+bg_color = Color(0.3366076, 0.33660764, 0.33660752, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7asoi"]
 size = Vector2(155, 208.1875)
 
@@ -470,6 +494,7 @@ size = Vector2(155, 208.1875)
 size = Vector2(131, 89)
 
 [node name="Node" type="Node"]
+script = ExtResource("1_espcj")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)
@@ -485,6 +510,22 @@ texture = ExtResource("2_espcj")
 position = Vector2(1687.9999, 315)
 scale = Vector2(2.070909, 1.8294119)
 texture = ExtResource("2_espcj")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 2002.0
+offset_top = 503.0
+offset_right = 2151.0
+offset_bottom = 590.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_55rdi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sj0c3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_52xqc")
+text = "Level Two "
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("3_55rdi")
@@ -538,3 +579,5 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.023529412, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 text = "Click Me for Your Second Riddle!!!"
+
+[connection signal="pressed" from="Area2D2/Button" to="." method="_on_button_pressed"]
