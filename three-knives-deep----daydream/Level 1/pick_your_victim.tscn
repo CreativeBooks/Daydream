@@ -69,5 +69,5 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_8dk3i")
 theme_override_styles/hover = SubResource("StyleBoxFlat_voni1")
 text = "Front Desk"
 
-[connection signal="pressed" from="Button3" to="Panel" method="_on_button_3_pressed"]
-[connection signal="pressed" from="Button2" to="Panel" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
