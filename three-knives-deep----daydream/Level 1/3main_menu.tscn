@@ -512,10 +512,10 @@ scale = Vector2(2.070909, 1.8294119)
 texture = ExtResource("2_espcj")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 2002.0
-offset_top = 503.0
-offset_right = 2151.0
-offset_bottom = 590.0
+offset_left = 2003.0
+offset_top = 535.0
+offset_right = 2198.0
+offset_bottom = 591.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
@@ -525,7 +525,7 @@ theme_override_font_sizes/font_size = 29
 theme_override_styles/normal = SubResource("StyleBoxFlat_55rdi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sj0c3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_52xqc")
-text = "Level Two "
+text = "Decision Time"
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("3_55rdi")
