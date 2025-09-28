@@ -38,7 +38,6 @@ offset_bottom = 651.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_prtpt")
 
 [node name="Button3" type="Button" parent="."]
-unique_name_in_owner = true
 offset_left = 752.0
 offset_top = 565.0
 offset_right = 938.0
@@ -55,7 +54,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_voni1")
 text = "Secretary "
 
 [node name="Button2" type="Button" parent="."]
-unique_name_in_owner = true
 offset_left = 200.0
 offset_top = 558.0
 offset_right = 386.0
@@ -71,5 +69,5 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_8dk3i")
 theme_override_styles/hover = SubResource("StyleBoxFlat_voni1")
 text = "Front Desk"
 
-[connection signal="pressed" from="Button3" to="Panel" method="_on_button_3_pressed"]
-[connection signal="pressed" from="Button2" to="Panel" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
