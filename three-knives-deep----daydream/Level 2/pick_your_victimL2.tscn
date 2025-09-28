@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://5h0rvigbplwi"]
+[gd_scene load_steps=7 format=3 uid="uid://cts04iib2wnlo"]
 
-[ext_resource type="Texture2D" uid="uid://bq7y2ix3j4tmh" path="res://images/Pick Your Victim.png" id="1_y25wk"]
-[ext_resource type="Script" uid="uid://d0b16ucncm4nr" path="res://Level 1/pick1.gd" id="2_bjhxb"]
+[ext_resource type="Script" uid="uid://cth4tnlbbr8qa" path="res://Level 2/pick_your_victim_l_2.gd" id="1_0lw4c"]
+[ext_resource type="Texture2D" uid="uid://lgbr1rg8orwy" path="res://images/Pick Your Victim 2.png" id="2_1ejuu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prtpt"]
-texture = ExtResource("1_y25wk")
+texture = ExtResource("2_1ejuu")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_woyds"]
 bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
@@ -30,7 +30,7 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [node name="PickYourVictim" type="Node2D"]
-script = ExtResource("2_bjhxb")
+script = ExtResource("1_0lw4c")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1148.0
@@ -51,7 +51,7 @@ theme_override_font_sizes/font_size = 29
 theme_override_styles/normal = SubResource("StyleBoxFlat_woyds")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8dk3i")
 theme_override_styles/hover = SubResource("StyleBoxFlat_voni1")
-text = "Secretary "
+text = "Butcher"
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 200.0
@@ -67,7 +67,7 @@ theme_override_font_sizes/font_size = 29
 theme_override_styles/normal = SubResource("StyleBoxFlat_woyds")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8dk3i")
 theme_override_styles/hover = SubResource("StyleBoxFlat_voni1")
-text = "Front Desk"
+text = "Chef"
 
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_1_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_2_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

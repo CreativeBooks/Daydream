@@ -1,14 +1,14 @@
-[gd_scene load_steps=11 format=4 uid="uid://bf5i66b7iyk4h"]
+[gd_scene load_steps=11 format=4 uid="uid://c7xojdro3hxvx"]
 
-[ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="1_v4cwh"]
-[ext_resource type="Script" uid="uid://8wguovq3e762" path="res://Level 1/riddle_2.gd" id="1_wb680"]
-[ext_resource type="Texture2D" uid="uid://dh4f7g3t8yhr2" path="res://images/Background.png" id="2_wb680"]
-[ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="3_1u4gb"]
-[ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="4_kp8pn"]
-[ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="5_14ki7"]
+[ext_resource type="Script" uid="uid://xidmwnwexdkk" path="res://Level 3/main_menu_1l_3.gd" id="1_n46yy"]
+[ext_resource type="Texture2D" uid="uid://eawjrcom7o7m" path="res://images/wall3.png" id="2_n46yy"]
+[ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="3_ptbnj"]
+[ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="4_jfx1a"]
+[ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="5_cm5va"]
+[ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="6_tvxo5"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4cwh"]
-texture = ExtResource("1_v4cwh")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wvvt"]
+texture = ExtResource("3_ptbnj")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -460,106 +460,71 @@ texture = ExtResource("1_v4cwh")
 14:14/0 = 0
 14:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_bdhm5"]
+[sub_resource type="TileSet" id="TileSet_qnhj8"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_v4cwh")
+sources/0 = SubResource("TileSetAtlasSource_7wvvt")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqjxu"]
-size = Vector2(155, 208.1875)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
+size = Vector2(174, 220.375)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1u4gb"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gvdq"]
 size = Vector2(131, 89)
 
 [node name="Node" type="Node"]
-script = ExtResource("1_wb680")
+script = ExtResource("1_n46yy")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(571.00006, 289.5)
-scale = Vector2(2.070909, 2.5147057)
-texture = ExtResource("2_wb680")
+position = Vector2(571.00006, 319.99997)
+scale = Vector2(2.070909, 2.3647058)
+texture = ExtResource("2_n46yy")
 
 [node name="Background2" type="Sprite2D" parent="."]
-position = Vector2(1687.9999, 288.5)
-scale = Vector2(2.070909, 2.5088236)
-texture = ExtResource("2_wb680")
+position = Vector2(1669.0001, 273.25)
+scale = Vector2(2.070909, 2.0838237)
+texture = ExtResource("2_n46yy")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)
-tile_map_data = PackedByteArray("AAAfAA0AAAAKAAcAAAAeAA0AAAAKAAcAAAAdAA0AAAAKAAcAAAAbAA0AAAAKAAcAAAAcAA0AAAAKAAcAAAAAAA0AAAAKAAcAAAAEAA0AAAAKAAcAAAAFAA0AAAAKAAcAAAAGAA0AAAAKAAcAAAAHAA0AAAAKAAcAAAAIAA0AAAAKAAcAAAABAA0AAAAKAAcAAAACAA0AAAAKAAcAAAADAA0AAAAKAAcAAAAAAA4AAAAKAAcAAAABAA4AAAAKAAcAAAACAA4AAAAKAAcAAAADAA4AAAAKAAcAAAAEAA4AAAAKAAcAAAAFAA4AAAAKAAcAAAAGAA4AAAAKAAcAAAAHAA4AAAAKAAcAAAAIAA4AAAAKAAcAAAAbAA4AAAAKAAcAAAAcAA4AAAAKAAcAAAAdAA4AAAAKAAcAAAAeAA4AAAAKAAcAAAAfAA4AAAAKAAcAAAAgAA0AAAAKAAcAAAAgAA4AAAAKAAcAAAAiAA4AAAAKAAcAAAAiAA0AAAAKAAcAAAAhAA0AAAAKAAcAAAAhAA4AAAAKAAcAAAAkAA4AAAAKAAcAAAAjAA4AAAAKAAcAAAAjAA0AAAAKAAcAAAAkAA0AAAAKAAcAAAAmAA4AAAAKAAcAAAAlAA4AAAAKAAcAAAAlAA0AAAAKAAcAAAAmAA0AAAAKAAcAAAAnAA4AAAAKAAcAAAAoAA4AAAAKAAcAAAApAA4AAAAKAAcAAAAqAA4AAAAKAAcAAAAnAA0AAAAKAAcAAAAoAA0AAAAKAAcAAAApAA0AAAAKAAcAAAAqAA0AAAAKAAcAAAArAA0AAAAKAAcAAAAsAA0AAAAKAAcAAAAsAA4AAAAKAAcAAAArAA4AAAAKAAcAAAAtAA0AAAAKAAcAAAAuAA0AAAAKAAcAAAAuAA4AAAAKAAcAAAAtAA4AAAAKAAcAAAAKAAsAAAAEAAEAAAALAAsAAAAEAAEAAAAMAAsAAAAEAAEAAAAOAAkAAAAEAAEAAAAPAAkAAAAEAAEAAAAQAAkAAAAEAAEAAAASAAcAAAAEAAEAAAATAAcAAAAEAAEAAAAUAAcAAAAEAAEAAAAVAAcAAAAEAAEAAAAXAAkAAAAEAAEAAAAYAAkAAAAEAAEAAAAZAAkAAAAEAAEAAAAZAAsAAAAEAAEAAAAaAAsAAAAEAAEAAAAbAAsAAAAEAAEAAAA=")
-tile_set = SubResource("TileSet_bdhm5")
+tile_map_data = PackedByteArray("AAAfAA0AAAAKAAcAAAAeAA0AAAAKAAcAAAAdAA0AAAAKAAcAAAAXAA0AAAAKAAcAAAAYAA0AAAAKAAcAAAAZAA0AAAAKAAcAAAAaAA0AAAAKAAcAAAAbAA0AAAAKAAcAAAAcAA0AAAAKAAcAAAAAAA0AAAAKAAcAAAAEAA0AAAAKAAcAAAAFAA0AAAAKAAcAAAAGAA0AAAAKAAcAAAABAA0AAAAKAAcAAAACAA0AAAAKAAcAAAADAA0AAAAKAAcAAAAAAA4AAAAKAAcAAAABAA4AAAAKAAcAAAACAA4AAAAKAAcAAAADAA4AAAAKAAcAAAAEAA4AAAAKAAcAAAAFAA4AAAAKAAcAAAAGAA4AAAAKAAcAAAAXAA4AAAAKAAcAAAAYAA4AAAAKAAcAAAAZAA4AAAAKAAcAAAAaAA4AAAAKAAcAAAAbAA4AAAAKAAcAAAAcAA4AAAAKAAcAAAAdAA4AAAAKAAcAAAAeAA4AAAAKAAcAAAAfAA4AAAAKAAcAAAAgAA0AAAAKAAcAAAAgAA4AAAAKAAcAAAAiAA4AAAAKAAcAAAAiAA0AAAAKAAcAAAAhAA0AAAAKAAcAAAAhAA4AAAAKAAcAAAAkAA4AAAAKAAcAAAAjAA4AAAAKAAcAAAAjAA0AAAAKAAcAAAAkAA0AAAAKAAcAAAAmAA4AAAAKAAcAAAAlAA4AAAAKAAcAAAAlAA0AAAAKAAcAAAAmAA0AAAAKAAcAAAAnAA4AAAAKAAcAAAAoAA4AAAAKAAcAAAApAA4AAAAKAAcAAAAqAA4AAAAKAAcAAAAnAA0AAAAKAAcAAAAoAA0AAAAKAAcAAAApAA0AAAAKAAcAAAAqAA0AAAAKAAcAAAArAA0AAAAKAAcAAAAsAA0AAAAKAAcAAAAsAA4AAAAKAAcAAAArAA4AAAAKAAcAAAAHAA8AAAACAAMAAAAIAA8AAAACAAMAAAAJAA8AAAACAAMAAAAKAA8AAAACAAMAAAALAA8AAAACAAMAAAAMAA8AAAACAAMAAAASAA8AAAACAAMAAAATAA8AAAACAAMAAAAUAA8AAAACAAMAAAAVAA8AAAACAAMAAAAWAA8AAAACAAMAAAANAA8AAAACAAMAAAAOAA8AAAACAAMAAAAPAA8AAAACAAMAAAAQAA8AAAACAAMAAAARAA8AAAACAAMAAAAPAAkAAAACAAMAAAAPAAoAAAACAAMAAAAOAAoAAAACAAMAAAAOAAkAAAACAAMAAAAVAAQAAAACAAMAAAAUAAQAAAACAAMAAAAUAAUAAAACAAMAAAAVAAUAAAACAAMAAAAIAAoAAAACAAMAAAAJAAoAAAACAAMAAAAIAAsAAAACAAMAAAAJAAsAAAACAAMAAAA=")
+tile_set = SubResource("TileSet_qnhj8")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("4_kp8pn")
+script = ExtResource("4_jfx1a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(310, 523)
-shape = SubResource("RectangleShape2D_lqjxu")
+position = Vector2(89.99999, 526.8125)
+shape = SubResource("RectangleShape2D_4c57u")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(307, 520.99994)
+position = Vector2(89.49999, 541.25)
 scale = Vector2(0.7291666, 0.66999996)
-texture = ExtResource("5_14ki7")
+texture = ExtResource("5_cm5va")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(577, 349)
 limit_left = 0
 limit_top = -50
-limit_right = 2154
+limit_right = 1993
 limit_bottom = 672
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(652, -7)
+position = Vector2(477, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(824.5, 565.5)
-shape = SubResource("RectangleShape2D_1u4gb")
+shape = SubResource("RectangleShape2D_7gvdq")
 
 [node name="Button" type="Button" parent="Area2D"]
 offset_left = 759.0
 offset_top = 517.0
 offset_right = 896.0
 offset_bottom = 613.0
-icon = ExtResource("3_1u4gb")
+icon = ExtResource("6_tvxo5")
 autowrap_trim_flags = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Area2D/Button"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -130.0
-offset_top = -76.0
-offset_right = 128.0
-offset_bottom = 49.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.023529412, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-text = "Click Me for Your Second Riddle!!!"
-metadata/_edit_use_anchors_ = true
-
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(-689, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(824.5, 565.5)
-shape = SubResource("RectangleShape2D_1u4gb")
-
-[node name="Button" type="Button" parent="Area2D2"]
-offset_left = 759.0
-offset_top = 517.0
-offset_right = 896.0
-offset_bottom = 613.0
-icon = ExtResource("3_1u4gb")
-autowrap_trim_flags = 0
-expand_icon = true
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="Area2D2/Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

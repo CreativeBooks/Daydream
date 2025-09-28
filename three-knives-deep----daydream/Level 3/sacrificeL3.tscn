@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://c21pnkd0xa2rv"]
+
+[ext_resource type="Script" uid="uid://bh6miqoishfkf" path="res://Level 3/sacrifice_l_3.gd" id="1_75lo3"]
+[ext_resource type="Texture2D" uid="uid://dv2m1af3ckudq" path="res://images/sacrifice.png" id="2_am3wg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hcvcx"]
+bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.82163996, 0, 0.025397828, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfxnl"]
+bg_color = Color(0.7792914, 0.7792914, 0.7792912, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp506"]
+bg_color = Color(0.3366076, 0.33660764, 0.33660752, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Sacrifice" type="Node2D"]
+script = ExtResource("1_75lo3")
+
+[node name="Sacrifice" type="Sprite2D" parent="."]
+position = Vector2(574, 328.00003)
+scale = Vector2(1.1165049, 1.1280277)
+texture = ExtResource("2_am3wg")
+
+[node name="Button2" type="Button" parent="Sacrifice"]
+offset_left = -298.25217
+offset_top = -64.71475
+offset_right = -18.808685
+offset_bottom = 177.30054
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_hcvcx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mfxnl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hp506")
+text = "Lose Another
+ 1/3 Ownership"
+
+[node name="Button3" type="Button" parent="Sacrifice"]
+offset_left = 51.947815
+offset_top = -63.828255
+offset_right = 327.80865
+offset_bottom = 179.07358
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_hcvcx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mfxnl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hp506")
+text = "Supernatural
+Activity Prevent
+Guests From
+Checking-In"
+
+[connection signal="pressed" from="Sacrifice/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Sacrifice/Button3" to="." method="_on_button_3_pressed"]

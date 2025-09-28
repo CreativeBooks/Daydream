@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c24kciy5tlf0o"]
+[gd_scene load_steps=8 format=3 uid="uid://c24kciy5tlf0o"]
 
 [ext_resource type="Script" uid="uid://dj5fycc6aqwhx" path="res://Menu/main_menu.gd" id="1_8w4re"]
 [ext_resource type="Texture2D" uid="uid://bum1to64tlwll" path="res://images/5ycaeP.jpg" id="2_ofseh"]
 [ext_resource type="FontFile" uid="uid://cptdqc2uo1o78" path="res://Assests/GolfClubHomicide-51azG.ttf" id="3_w6voe"]
-[ext_resource type="AudioStream" uid="uid://bhmelmqtkb53a" path="res://Assests/Best Dramatic music ever!!.mp3" id="4_eafcm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
 texture = ExtResource("2_ofseh")
@@ -86,19 +85,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_nlkkf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_qe12f")
 text = "Start Game"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 29
-theme_override_styles/normal = SubResource("StyleBoxFlat_glbon")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_nlkkf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_qe12f")
-text = "Options"
-
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -133,10 +119,5 @@ theme_override_font_sizes/font_size = 150
 text = "3 Knives Deep"
 horizontal_alignment = 1
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_eafcm")
-autoplay = true
-
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]

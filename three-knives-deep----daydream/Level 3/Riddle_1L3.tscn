@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbqawnu7lmw2"]
+
+[ext_resource type="Script" uid="uid://dg6lnc1bfssa1" path="res://Level 3/riddle_1l_3.gd" id="1_ougxq"]
+[ext_resource type="Texture2D" uid="uid://bpy4wtdly4o4y" path="res://images/Riddle1L3.png" id="2_iv1qq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wuihb"]
+texture = ExtResource("2_iv1qq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qusr0"]
+bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.82163996, 0, 0.025397828, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bw53i"]
+bg_color = Color(0.7792914, 0.7792914, 0.7792912, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65w34"]
+bg_color = Color(0.3366076, 0.33660764, 0.33660752, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Riddle#1" type="Node2D"]
+script = ExtResource("1_ougxq")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 645.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wuihb")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 392.0
+offset_top = 524.0
+offset_right = 747.0
+offset_bottom = 564.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_qusr0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bw53i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_65w34")
+text = "Return to Level"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

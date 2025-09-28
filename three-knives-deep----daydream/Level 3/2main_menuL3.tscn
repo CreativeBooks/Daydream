@@ -1,14 +1,14 @@
-[gd_scene load_steps=11 format=4 uid="uid://bf5i66b7iyk4h"]
+[gd_scene load_steps=11 format=4 uid="uid://bajoc6eejc07n"]
 
-[ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="1_v4cwh"]
-[ext_resource type="Script" uid="uid://8wguovq3e762" path="res://Level 1/riddle_2.gd" id="1_wb680"]
-[ext_resource type="Texture2D" uid="uid://dh4f7g3t8yhr2" path="res://images/Background.png" id="2_wb680"]
-[ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="3_1u4gb"]
-[ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="4_kp8pn"]
-[ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="5_14ki7"]
+[ext_resource type="Script" uid="uid://bjs42hija1wx6" path="res://Level 3/2_main_menu_l_3.gd" id="1_mckuq"]
+[ext_resource type="Texture2D" uid="uid://eawjrcom7o7m" path="res://images/wall3.png" id="2_mckuq"]
+[ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="3_j8yaw"]
+[ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="4_rv6np"]
+[ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="5_4j457"]
+[ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="6_r03bi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4cwh"]
-texture = ExtResource("1_v4cwh")
+texture = ExtResource("3_j8yaw")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -465,40 +465,40 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_v4cwh")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqjxu"]
-size = Vector2(155, 208.1875)
+size = Vector2(138.5, 208.1875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1u4gb"]
 size = Vector2(131, 89)
 
 [node name="Node" type="Node"]
-script = ExtResource("1_wb680")
+script = ExtResource("1_mckuq")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(571.00006, 289.5)
-scale = Vector2(2.070909, 2.5147057)
-texture = ExtResource("2_wb680")
+position = Vector2(571.00006, 319.49997)
+scale = Vector2(2.070909, 2.35)
+texture = ExtResource("2_mckuq")
 
 [node name="Background2" type="Sprite2D" parent="."]
-position = Vector2(1687.9999, 288.5)
-scale = Vector2(2.070909, 2.5088236)
-texture = ExtResource("2_wb680")
+position = Vector2(1687.9999, 319.00003)
+scale = Vector2(2.070909, 2.3529408)
+texture = ExtResource("2_mckuq")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)
-tile_map_data = PackedByteArray("AAAfAA0AAAAKAAcAAAAeAA0AAAAKAAcAAAAdAA0AAAAKAAcAAAAbAA0AAAAKAAcAAAAcAA0AAAAKAAcAAAAAAA0AAAAKAAcAAAAEAA0AAAAKAAcAAAAFAA0AAAAKAAcAAAAGAA0AAAAKAAcAAAAHAA0AAAAKAAcAAAAIAA0AAAAKAAcAAAABAA0AAAAKAAcAAAACAA0AAAAKAAcAAAADAA0AAAAKAAcAAAAAAA4AAAAKAAcAAAABAA4AAAAKAAcAAAACAA4AAAAKAAcAAAADAA4AAAAKAAcAAAAEAA4AAAAKAAcAAAAFAA4AAAAKAAcAAAAGAA4AAAAKAAcAAAAHAA4AAAAKAAcAAAAIAA4AAAAKAAcAAAAbAA4AAAAKAAcAAAAcAA4AAAAKAAcAAAAdAA4AAAAKAAcAAAAeAA4AAAAKAAcAAAAfAA4AAAAKAAcAAAAgAA0AAAAKAAcAAAAgAA4AAAAKAAcAAAAiAA4AAAAKAAcAAAAiAA0AAAAKAAcAAAAhAA0AAAAKAAcAAAAhAA4AAAAKAAcAAAAkAA4AAAAKAAcAAAAjAA4AAAAKAAcAAAAjAA0AAAAKAAcAAAAkAA0AAAAKAAcAAAAmAA4AAAAKAAcAAAAlAA4AAAAKAAcAAAAlAA0AAAAKAAcAAAAmAA0AAAAKAAcAAAAnAA4AAAAKAAcAAAAoAA4AAAAKAAcAAAApAA4AAAAKAAcAAAAqAA4AAAAKAAcAAAAnAA0AAAAKAAcAAAAoAA0AAAAKAAcAAAApAA0AAAAKAAcAAAAqAA0AAAAKAAcAAAArAA0AAAAKAAcAAAAsAA0AAAAKAAcAAAAsAA4AAAAKAAcAAAArAA4AAAAKAAcAAAAtAA0AAAAKAAcAAAAuAA0AAAAKAAcAAAAuAA4AAAAKAAcAAAAtAA4AAAAKAAcAAAAKAAsAAAAEAAEAAAALAAsAAAAEAAEAAAAMAAsAAAAEAAEAAAAOAAkAAAAEAAEAAAAPAAkAAAAEAAEAAAAQAAkAAAAEAAEAAAASAAcAAAAEAAEAAAATAAcAAAAEAAEAAAAUAAcAAAAEAAEAAAAVAAcAAAAEAAEAAAAXAAkAAAAEAAEAAAAYAAkAAAAEAAEAAAAZAAkAAAAEAAEAAAAZAAsAAAAEAAEAAAAaAAsAAAAEAAEAAAAbAAsAAAAEAAEAAAA=")
+tile_map_data = PackedByteArray("AAAfAA0AAAAKAAcAAAAeAA0AAAAKAAcAAAAdAA0AAAAKAAcAAAAAAA0AAAAKAAcAAAAEAA0AAAAKAAcAAAAFAA0AAAAKAAcAAAAGAA0AAAAKAAcAAAAHAA0AAAAKAAcAAAAIAA0AAAAKAAcAAAABAA0AAAAKAAcAAAACAA0AAAAKAAcAAAADAA0AAAAKAAcAAAAAAA4AAAAKAAcAAAABAA4AAAAKAAcAAAACAA4AAAAKAAcAAAADAA4AAAAKAAcAAAAEAA4AAAAKAAcAAAAFAA4AAAAKAAcAAAAGAA4AAAAKAAcAAAAHAA4AAAAKAAcAAAAIAA4AAAAKAAcAAAAdAA4AAAAKAAcAAAAeAA4AAAAKAAcAAAAfAA4AAAAKAAcAAAAgAA0AAAAKAAcAAAAgAA4AAAAKAAcAAAAiAA4AAAAKAAcAAAAiAA0AAAAKAAcAAAAhAA0AAAAKAAcAAAAhAA4AAAAKAAcAAAAkAA4AAAAKAAcAAAAjAA4AAAAKAAcAAAAjAA0AAAAKAAcAAAAkAA0AAAAKAAcAAAAmAA4AAAAKAAcAAAAlAA4AAAAKAAcAAAAlAA0AAAAKAAcAAAAmAA0AAAAKAAcAAAAnAA4AAAAKAAcAAAAoAA4AAAAKAAcAAAApAA4AAAAKAAcAAAAqAA4AAAAKAAcAAAAnAA0AAAAKAAcAAAAoAA0AAAAKAAcAAAApAA0AAAAKAAcAAAAqAA0AAAAKAAcAAAArAA0AAAAKAAcAAAAsAA0AAAAKAAcAAAAsAA4AAAAKAAcAAAArAA4AAAAKAAcAAAAtAA0AAAAKAAcAAAAuAA0AAAAKAAcAAAAuAA4AAAAKAAcAAAAtAA4AAAAKAAcAAAAJABAAAAACAAMAAAAKABAAAAACAAMAAAALABAAAAACAAMAAAAMABAAAAACAAMAAAANABAAAAACAAMAAAAOABAAAAACAAMAAAAPABAAAAACAAMAAAAQABAAAAACAAMAAAARABAAAAACAAMAAAASABAAAAACAAMAAAATABAAAAACAAMAAAAUABAAAAACAAMAAAAVABAAAAACAAMAAAAWABAAAAACAAMAAAAXABAAAAACAAMAAAAYABAAAAACAAMAAAAZABAAAAACAAMAAAAaABAAAAACAAMAAAAbABAAAAACAAMAAAAcABAAAAACAAMAAAALAAoAAAACAAMAAAALAAsAAAACAAMAAAARAAoAAAACAAMAAAARAAsAAAACAAMAAAAYAAoAAAACAAMAAAAYAAsAAAACAAMAAAA=")
 tile_set = SubResource("TileSet_bdhm5")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("4_kp8pn")
+script = ExtResource("4_rv6np")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(310, 523)
+position = Vector2(301.75, 523)
 shape = SubResource("RectangleShape2D_lqjxu")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(307, 520.99994)
-scale = Vector2(0.7291666, 0.66999996)
-texture = ExtResource("5_14ki7")
+position = Vector2(302.75, 520.99994)
+scale = Vector2(0.6937499, 0.66999996)
+texture = ExtResource("5_4j457")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(577, 349)
@@ -519,7 +519,7 @@ offset_left = 759.0
 offset_top = 517.0
 offset_right = 896.0
 offset_bottom = 613.0
-icon = ExtResource("3_1u4gb")
+icon = ExtResource("6_r03bi")
 autowrap_trim_flags = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
@@ -554,7 +554,7 @@ offset_left = 759.0
 offset_top = 517.0
 offset_right = 896.0
 offset_bottom = 613.0
-icon = ExtResource("3_1u4gb")
+icon = ExtResource("6_r03bi")
 autowrap_trim_flags = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
