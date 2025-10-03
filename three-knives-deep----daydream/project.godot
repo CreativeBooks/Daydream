@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 DecisionTracker="res://Scripts/DecisionTracker.gd"
 Music="*res://Assests/music.tscn"
-GameState="res://Scripts/GameState.gd"
+GameState="*res://Scripts/GameState.gd"
 
 [editor_plugins]
 
