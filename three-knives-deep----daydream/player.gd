@@ -8,7 +8,7 @@ var jump_count = 0
 
 
 const LIMIT_LEFT = 0
-const LIMIT_RIGHT = 1700
+const LIMIT_RIGHT = 4960
 const LIMIT_TOP = -10000000000000
 const LIMIT_BOTTOM = 672
 
