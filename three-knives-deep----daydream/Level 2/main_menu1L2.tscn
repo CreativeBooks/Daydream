@@ -525,7 +525,7 @@ texture = ExtResource("5_dc3mi")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(92, 556)
 limit_left = 0
-limit_top = 4
+limit_top = 194
 limit_right = 4968
 limit_bottom = 672
 

@@ -108,3 +108,21 @@ func _on_3_l_2_body_entered(body: Node2D) -> void:
 	if body == self:
 		print("🔄 Player entered reset zone — restarting level...")
 		get_tree().reload_current_scene()
+
+
+func _on_l_3_body_entered(body: Node2D) -> void:
+	if body == self:
+		print("🔄 Player entered reset zone — restarting level...")
+		get_tree().reload_current_scene()
+
+
+func _on_2_l_3_body_entered(body: Node2D) -> void:
+	if body == self:
+		print("🔄 Player entered reset zone — restarting level...")
+		get_tree().reload_current_scene()
+
+
+func _on_3_l_3_body_entered(body: Node2D) -> void:
+	if body == self:
+		print("🔄 Player entered reset zone — restarting level...")
+		get_tree().reload_current_scene()
