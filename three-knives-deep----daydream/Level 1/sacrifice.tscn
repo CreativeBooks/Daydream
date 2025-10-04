@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bd7yo27u3bsdl"]
+[gd_scene load_steps=7 format=3 uid="uid://bd7yo27u3bsdl"]
 
 [ext_resource type="Script" uid="uid://0mbn1spaudjl" path="res://Level 1/sacrifice.gd" id="1_ba08i"]
 [ext_resource type="Texture2D" uid="uid://dv2m1af3ckudq" path="res://images/sacrifice.png" id="2_5qe6l"]
+[ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="3_5qe6l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hcvcx"]
 bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
@@ -30,8 +31,8 @@ corner_radius_bottom_left = 16
 script = ExtResource("1_ba08i")
 
 [node name="Sacrifice" type="Sprite2D" parent="."]
-position = Vector2(574, 328.00003)
-scale = Vector2(1.1165049, 1.1280277)
+position = Vector2(590, 371.50003)
+scale = Vector2(1.1475729, 1.2785467)
 texture = ExtResource("2_5qe6l")
 
 [node name="Button2" type="Button" parent="Sacrifice"]
@@ -44,7 +45,8 @@ theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 29
+theme_override_fonts/font = ExtResource("3_5qe6l")
+theme_override_font_sizes/font_size = 43
 theme_override_styles/normal = SubResource("StyleBoxFlat_hcvcx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_mfxnl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hp506")
@@ -60,7 +62,8 @@ theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 29
+theme_override_fonts/font = ExtResource("3_5qe6l")
+theme_override_font_sizes/font_size = 43
 theme_override_styles/normal = SubResource("StyleBoxFlat_hcvcx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_mfxnl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hp506")

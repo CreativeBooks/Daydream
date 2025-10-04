@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://bj5jxrcb1nntt"]
+[gd_scene load_steps=16 format=4 uid="uid://bj5jxrcb1nntt"]
 
 [ext_resource type="Script" uid="uid://dxs2g2a678irp" path="res://Level 2/3_main_menu_l_2.gd" id="1_xp8x5"]
 [ext_resource type="Texture2D" uid="uid://bbfarv1y1p87y" path="res://images/wall2.png" id="2_xp8x5"]
 [ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="3_w2k56"]
+[ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="4_rwl62"]
 [ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="4_xvmag"]
 [ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="5_kbe7w"]
 [ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="6_akllt"]
@@ -542,7 +543,8 @@ theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 29
+theme_override_fonts/font = ExtResource("4_rwl62")
+theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxFlat_55rdi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sj0c3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_52xqc")
