@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	position.x = clamp(position.x, LIMIT_LEFT, LIMIT_RIGHT)
 
 	if can_fall and position.y > FALL_LIMIT_Y:
-		print("🕳 Player fell off the level (Y = ", position.y, ")")
+		print("Player fell off the level (Y = ", position.y, ")")
 		respawn()
 	
 	if just_respawned and is_on_floor():
@@ -45,9 +45,9 @@ func _physics_process(delta: float) -> void:
 		just_respawned = false
 	
 	if not is_inside_tree():
-		print("🚫 Player is not in the scene tree!")
+		print("Player is not in the scene tree!")
 	else:
-		print("✅ Player is still in the scene")
+		print("Player is still in the scene")
 
 	
 
@@ -57,18 +57,18 @@ func find_respawn_point():
 	
 	if point:
 		respawn_position = point.global_position
-		print("✅ RespawnPoint found at: ", respawn_position)
+		print("RespawnPoint found at: ", respawn_position)
 	else:
 		respawn_position = global_position
-		print("❌ RespawnPoint not found! Defaulting to current position")
+		print("RespawnPoint not found! Defaulting to current position")
 
 func respawn():
-	print("⚠️ Respawning player...")
+	print("Respawning player...")
 	position = respawn_position  # Use position, not global_position
 	velocity = Vector2.ZERO
 	can_fall = false
 	just_respawned = true
-	print("🛬 Player moved to: ", position)
+	print(" Player moved to: ", position)
 	
 
 	
