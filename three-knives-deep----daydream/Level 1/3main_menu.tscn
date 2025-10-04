@@ -527,10 +527,10 @@ tile_map_data = PackedByteArray("AAAeAA0AAAAKAAcAAAAYAA0AAAAKAAcAAAAAAA0AAAAKAAc
 tile_set = SubResource("TileSet_27enq")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 4863.0
-offset_top = 403.0
-offset_right = 5058.0
-offset_bottom = 459.0
+offset_left = 4809.0
+offset_top = 399.0
+offset_right = 5004.0
+offset_bottom = 455.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
