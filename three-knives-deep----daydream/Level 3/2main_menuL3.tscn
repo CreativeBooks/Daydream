@@ -474,28 +474,28 @@ size = Vector2(131, 89)
 script = ExtResource("1_mckuq")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(571.00006, 259.49997)
-scale = Vector2(2.070909, 2.702941)
+position = Vector2(571.00006, 330.99994)
+scale = Vector2(2.070909, 2.2823527)
 texture = ExtResource("2_mckuq")
 
 [node name="Background2" type="Sprite2D" parent="."]
-position = Vector2(1687.9999, 259.49997)
-scale = Vector2(2.070909, 2.702941)
+position = Vector2(1687.9999, 330.99997)
+scale = Vector2(2.070909, 2.2823527)
 texture = ExtResource("2_mckuq")
 
 [node name="Background3" type="Sprite2D" parent="."]
-position = Vector2(2784, 260)
-scale = Vector2(2.070909, 2.702941)
+position = Vector2(2784, 329.75)
+scale = Vector2(2.070909, 2.275)
 texture = ExtResource("2_mckuq")
 
 [node name="Background4" type="Sprite2D" parent="."]
-position = Vector2(3883, 260)
-scale = Vector2(2.070909, 2.702941)
+position = Vector2(3883, 333.25)
+scale = Vector2(2.070909, 2.2720587)
 texture = ExtResource("2_mckuq")
 
 [node name="Background5" type="Sprite2D" parent="."]
-position = Vector2(4991, 262)
-scale = Vector2(2.070909, 2.702941)
+position = Vector2(4991, 333.75)
+scale = Vector2(2.070909, 2.275)
 texture = ExtResource("2_mckuq")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -518,7 +518,7 @@ texture = ExtResource("5_4j457")
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(577, 349)
 limit_left = 0
-limit_top = -200
+limit_top = -10
 limit_right = 5563
 limit_bottom = 672
 
