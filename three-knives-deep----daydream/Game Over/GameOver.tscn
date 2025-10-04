@@ -8,13 +8,10 @@
 texture = ExtResource("2_c4c13")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1m2q"]
-bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0.82163996, 0, 0.025397828, 1)
+bg_color = Color(0, 0, 0, 1)
+shadow_color = Color(0.5200157, 0, 0.008480254, 1)
 shadow_size = 6
+shadow_offset = Vector2(4.58, 4.905)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2lin"]
 bg_color = Color(0.7792914, 0.7792914, 0.7792912, 1)
