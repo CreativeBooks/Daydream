@@ -14,3 +14,4 @@ func start_typing():
 		text += text_to_show[i]
 		i += 1
 		await get_tree().create_timer(speed).timeout
+		
