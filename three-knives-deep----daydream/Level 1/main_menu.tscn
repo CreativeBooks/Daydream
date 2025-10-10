@@ -1,11 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://bpf5njcnytgp0"]
+[gd_scene load_steps=15 format=4 uid="uid://bpf5njcnytgp0"]
 
 [ext_resource type="Script" uid="uid://dfs2qrw77j3un" path="res://Level 1/riddle_1.gd" id="1_7gvdq"]
 [ext_resource type="Texture2D" uid="uid://dq7s7j6c6iu56" path="res://images/background2.0.png" id="2_7gvdq"]
 [ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="2_jujc4"]
 [ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="3_7gvdq"]
 [ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="3_7wvvt"]
-[ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="4_7wvvt"]
+[ext_resource type="Texture2D" uid="uid://bda1kmxqcvt25" path="res://images/spritesheet-removebg-preview.png" id="5_7gvdq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wvvt"]
 texture = ExtResource("2_jujc4")
@@ -467,13 +467,35 @@ sources/0 = SubResource("TileSetAtlasSource_7wvvt")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
 size = Vector2(65, 194)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wvvt"]
+atlas = ExtResource("5_7gvdq")
+region = Rect2(0, 0, 335, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tld1m"]
+atlas = ExtResource("5_7gvdq")
+region = Rect2(335, 0, 335, 372)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnhj8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wvvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tld1m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7gvdq"]
 size = Vector2(131, 89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7wvvt"]
 size = Vector2(4938.5, 111)
 
-[node name="Node" type="Node"]
+[node name="Node2" type="Node"]
 script = ExtResource("1_7gvdq")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -514,17 +536,18 @@ script = ExtResource("3_7gvdq")
 position = Vector2(88.5, 544)
 shape = SubResource("RectangleShape2D_4c57u")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(89.49999, 541.25)
-scale = Vector2(0.7291666, 0.66999996)
-texture = ExtResource("4_7wvvt")
-
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(577, 349)
 limit_left = 0
 limit_top = -182
 limit_right = 4933
 limit_bottom = 718
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(117, 503)
+sprite_frames = SubResource("SpriteFrames_qnhj8")
+frame = 1
+frame_progress = 0.32166746
 
 [node name="RespawnPoint" type="Marker2D" parent="."]
 position = Vector2(80, 561)
