@@ -1,9 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bnt0fiqyxbwjx"]
 
-[ext_resource type="AudioStream" uid="uid://bnt7q43sleiu5" path="res://Assests/Attack on Titan - Shinzou wo Sasageyo (Instrumental).mp3" id="1_jcjnn"]
+[ext_resource type="AudioStream" uid="uid://dotfywv1mplt0" path="res://Assests/Three Knives Deep Soundtrack.mp3" id="1_jcjnn"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_jcjnn")
-autoplay = true

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cu2u3agb5qlo6"]
+[gd_scene load_steps=8 format=3 uid="uid://cu2u3agb5qlo6"]
 
 [ext_resource type="Texture2D" uid="uid://bffm0mj82js22" path="res://images/Untitled design.png" id="1_5morg"]
 [ext_resource type="Script" uid="uid://o7g6npn8o8i3" path="res://Level 1/riddle_2_2.gd" id="1_6le4k"]
+[ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="3_xwgo8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6le4k"]
 texture = ExtResource("1_5morg")
@@ -33,8 +34,8 @@ corner_radius_bottom_left = 16
 script = ExtResource("1_6le4k")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1152.0
-offset_bottom = 645.0
+offset_right = 1170.0
+offset_bottom = 690.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_6le4k")
 
 [node name="Button" type="Button" parent="."]
@@ -47,7 +48,8 @@ theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 29
+theme_override_fonts/font = ExtResource("3_xwgo8")
+theme_override_font_sizes/font_size = 43
 theme_override_styles/normal = SubResource("StyleBoxFlat_xwgo8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jhi8j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rtqff")

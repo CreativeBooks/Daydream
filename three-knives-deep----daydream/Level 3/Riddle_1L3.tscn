@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbqawnu7lmw2"]
+[gd_scene load_steps=8 format=3 uid="uid://cbqawnu7lmw2"]
 
 [ext_resource type="Script" uid="uid://dg6lnc1bfssa1" path="res://Level 3/riddle_1l_3.gd" id="1_ougxq"]
 [ext_resource type="Texture2D" uid="uid://bpy4wtdly4o4y" path="res://images/Riddle1L3.png" id="2_iv1qq"]
+[ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="3_iv1qq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wuihb"]
 texture = ExtResource("2_iv1qq")
@@ -47,7 +48,8 @@ theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 29
+theme_override_fonts/font = ExtResource("3_iv1qq")
+theme_override_font_sizes/font_size = 43
 theme_override_styles/normal = SubResource("StyleBoxFlat_qusr0")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bw53i")
 theme_override_styles/hover = SubResource("StyleBoxFlat_65w34")
