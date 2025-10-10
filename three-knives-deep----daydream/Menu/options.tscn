@@ -42,8 +42,8 @@ script = ExtResource("1_47jak")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 651.0
+offset_right = 1179.0
+offset_bottom = 680.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_knagg")
 
 [node name="Label" type="Label" parent="."]
