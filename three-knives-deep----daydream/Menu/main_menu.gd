@@ -14,7 +14,7 @@ func _on_exit_pressed():
 
 
 func _on_level_3_pressed() -> void:
-	get_tree().change_scene_to_file("res://Level 3/main_menu1L3.tscn")
+	get_tree().change_scene_to_file("res://Level 2/main_menu1L2.tscn")
 
 
 func _on_options_pressed() -> void:

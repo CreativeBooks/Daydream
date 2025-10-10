@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6so4f0wy2fmn"]
+
+[ext_resource type="Texture2D" uid="uid://dxsy6m26qlan6" path="res://Image/elevator.jpg" id="1_77phx"]
+[ext_resource type="Script" uid="uid://w12xj2cfe6pp" path="res://Game Over/surprise1.gd" id="1_k5cb2"]
+[ext_resource type="FontFile" uid="uid://kopgt30a5vll" path="res://Assests/RubikWetPaint-Regular.ttf" id="3_e01xi"]
+[ext_resource type="Script" uid="uid://ro3ceunf8plk" path="res://Game Over/surprise.gd" id="3_k5cb2"]
+[ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="5_e01xi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e01xi"]
+texture = ExtResource("1_77phx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lahyu"]
+bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.82163996, 0, 0.025397828, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5m7ev"]
+bg_color = Color(0.7792914, 0.7792914, 0.7792912, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kl4td"]
+bg_color = Color(0.3366076, 0.33660764, 0.33660752, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Surprise" type="Node2D"]
+script = ExtResource("1_k5cb2")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_e01xi")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 143.0
+offset_top = 188.0
+offset_right = 1390.0
+offset_bottom = 580.0
+theme_override_colors/font_color = Color(0.9122707, 3.1766297e-06, 6.738305e-07, 1)
+theme_override_fonts/font = ExtResource("3_e01xi")
+theme_override_font_sizes/font_size = 19
+text = "                                                                    A low groan echoed through the shaft.
+
+                                                                                      The lights flickered once—
+
+                                                                                    Then the elevator dropped.
+
+                         Screams were cut short by the sound of metal folding in on itself.
+
+                                                                                    Silence followed. Cold. Final."
+script = ExtResource("3_k5cb2")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 435.0
+offset_top = 546.0
+offset_right = 737.0
+offset_bottom = 589.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_e01xi")
+theme_override_font_sizes/font_size = 43
+theme_override_styles/normal = SubResource("StyleBoxFlat_lahyu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5m7ev")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kl4td")
+text = "Proceed to Level"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
