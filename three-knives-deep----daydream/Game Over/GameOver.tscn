@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://co4j4m4al4dxb"]
 
 [ext_resource type="Script" uid="uid://di4hrencjtuwi" path="res://Game Over/game_over.gd" id="1_c4c13"]
-[ext_resource type="Texture2D" uid="uid://dubg3bdkah06j" path="res://images/1.png" id="2_c4c13"]
+[ext_resource type="Texture2D" uid="uid://cbbsitbep3b1o" path="res://Image/winloose2.png" id="2_1bbum"]
 [ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="3_1bbum"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c4c13"]
-texture = ExtResource("2_c4c13")
+texture = ExtResource("2_1bbum")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1m2q"]
 bg_color = Color(0, 0, 0, 1)

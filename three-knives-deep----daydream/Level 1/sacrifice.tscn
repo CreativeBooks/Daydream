@@ -31,8 +31,8 @@ corner_radius_bottom_left = 16
 script = ExtResource("1_ba08i")
 
 [node name="Sacrifice" type="Sprite2D" parent="."]
-position = Vector2(590, 371.50003)
-scale = Vector2(1.1475729, 1.2785467)
+position = Vector2(588.99994, 354.50003)
+scale = Vector2(1.1456308, 1.2197232)
 texture = ExtResource("2_5qe6l")
 
 [node name="Button2" type="Button" parent="Sacrifice"]
