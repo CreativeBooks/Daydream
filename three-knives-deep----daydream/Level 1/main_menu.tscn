@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://bpf5njcnytgp0"]
 
 [ext_resource type="Script" uid="uid://dfs2qrw77j3un" path="res://Level 1/riddle_1.gd" id="1_7gvdq"]
-[ext_resource type="Texture2D" uid="uid://dh4f7g3t8yhr2" path="res://images/Background.png" id="1_kxlbf"]
+[ext_resource type="Texture2D" uid="uid://dq7s7j6c6iu56" path="res://images/background2.0.png" id="2_7gvdq"]
 [ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="2_jujc4"]
 [ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="3_7gvdq"]
 [ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="3_7wvvt"]
@@ -479,27 +479,27 @@ script = ExtResource("1_7gvdq")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(571.00006, 194.49997)
 scale = Vector2(2.070909, 3.0735292)
-texture = ExtResource("1_kxlbf")
+texture = ExtResource("2_7gvdq")
 
 [node name="Background2" type="Sprite2D" parent="."]
 position = Vector2(1593, 196.50003)
 scale = Vector2(2.070909, 3.0735292)
-texture = ExtResource("1_kxlbf")
+texture = ExtResource("2_7gvdq")
 
 [node name="Background3" type="Sprite2D" parent="."]
 position = Vector2(2612, 197.5)
 scale = Vector2(2.070909, 3.0617647)
-texture = ExtResource("1_kxlbf")
+texture = ExtResource("2_7gvdq")
 
 [node name="Background4" type="Sprite2D" parent="."]
 position = Vector2(3652, 197.5)
 scale = Vector2(2.070909, 3.0617647)
-texture = ExtResource("1_kxlbf")
+texture = ExtResource("2_7gvdq")
 
 [node name="Background5" type="Sprite2D" parent="."]
-position = Vector2(4384.75, 195.50003)
+position = Vector2(4329.7505, 195.50003)
 scale = Vector2(2.0372732, 3.0735292)
-texture = ExtResource("1_kxlbf")
+texture = ExtResource("2_7gvdq")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)

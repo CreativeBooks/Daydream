@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cn8p1i5n5s0ks" path="res://Level 1/3_main_menu.gd" id="1_espcj"]
 [ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="1_oqie6"]
-[ext_resource type="Texture2D" uid="uid://dh4f7g3t8yhr2" path="res://images/Background.png" id="2_espcj"]
+[ext_resource type="Texture2D" uid="uid://dq7s7j6c6iu56" path="res://images/background2.0.png" id="2_55rdi"]
 [ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="3_55rdi"]
 [ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="4_55rdi"]
 [ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="4_sj0c3"]
@@ -503,27 +503,27 @@ script = ExtResource("1_espcj")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(571.00006, 274.99997)
 scale = Vector2(2.070909, 2.3470585)
-texture = ExtResource("2_espcj")
+texture = ExtResource("2_55rdi")
 
 [node name="Background2" type="Sprite2D" parent="."]
 position = Vector2(1687.9999, 275.5)
 scale = Vector2(2.070909, 2.3382356)
-texture = ExtResource("2_espcj")
+texture = ExtResource("2_55rdi")
 
 [node name="Background3" type="Sprite2D" parent="."]
 position = Vector2(2723, 272.99997)
 scale = Vector2(2.070909, 2.3382356)
-texture = ExtResource("2_espcj")
+texture = ExtResource("2_55rdi")
 
 [node name="Background4" type="Sprite2D" parent="."]
 position = Vector2(3748, 273)
 scale = Vector2(2.070909, 2.3382356)
-texture = ExtResource("2_espcj")
+texture = ExtResource("2_55rdi")
 
 [node name="Background5" type="Sprite2D" parent="."]
-position = Vector2(4494, 269.99997)
-scale = Vector2(2.070909, 2.3382356)
-texture = ExtResource("2_espcj")
+position = Vector2(4475.827, 269.99997)
+scale = Vector2(2.1175056, 2.3382356)
+texture = ExtResource("2_55rdi")
 
 [node name="RespawnPoint" type="Marker2D" parent="."]
 position = Vector2(359, 566)

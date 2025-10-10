@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="1_v4cwh"]
 [ext_resource type="Script" uid="uid://8wguovq3e762" path="res://Level 1/riddle_2.gd" id="1_wb680"]
-[ext_resource type="Texture2D" uid="uid://dh4f7g3t8yhr2" path="res://images/Background.png" id="2_wb680"]
+[ext_resource type="Texture2D" uid="uid://dq7s7j6c6iu56" path="res://images/background2.0.png" id="2_v4cwh"]
 [ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="3_1u4gb"]
 [ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="4_kp8pn"]
 [ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="5_14ki7"]
@@ -479,27 +479,27 @@ script = ExtResource("1_wb680")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(571.00006, 216.49997)
 scale = Vector2(2.070909, 2.9441175)
-texture = ExtResource("2_wb680")
+texture = ExtResource("2_v4cwh")
 
 [node name="Background2" type="Sprite2D" parent="."]
-position = Vector2(1687.9999, 215.50003)
+position = Vector2(1655.9998, 215.50003)
 scale = Vector2(2.070909, 2.9382353)
-texture = ExtResource("2_wb680")
+texture = ExtResource("2_v4cwh")
 
 [node name="Background3" type="Sprite2D" parent="."]
-position = Vector2(2692.0002, 216.75005)
-scale = Vector2(2.070909, 2.9397058)
-texture = ExtResource("2_wb680")
+position = Vector2(2632.3274, 216.75005)
+scale = Vector2(2.1034036, 2.9397058)
+texture = ExtResource("2_v4cwh")
 
 [node name="Background4" type="Sprite2D" parent="."]
 position = Vector2(3706, 215.75003)
 scale = Vector2(2.070909, 2.927941)
-texture = ExtResource("2_wb680")
+texture = ExtResource("2_v4cwh")
 
 [node name="Background5" type="Sprite2D" parent="."]
-position = Vector2(4442, 220.25002)
+position = Vector2(4413.0005, 216.25002)
 scale = Vector2(2.070909, 2.9132354)
-texture = ExtResource("2_wb680")
+texture = ExtResource("2_v4cwh")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)
