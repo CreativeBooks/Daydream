@@ -34,16 +34,16 @@ corner_radius_bottom_left = 16
 script = ExtResource("1_p4llw")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = -36.0
-offset_right = 1251.0
-offset_bottom = 752.0
+offset_left = 1.0
+offset_right = 1173.0
+offset_bottom = 677.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wuihb")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 440.0
-offset_top = 574.0
-offset_right = 795.0
-offset_bottom = 614.0
+offset_left = 417.0
+offset_top = 555.0
+offset_right = 772.0
+offset_bottom = 598.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://d30ke5veh35ei"]
 
 [ext_resource type="Script" uid="uid://do4l4fpd7txiw" path="res://Game Over/you_win.gd" id="1_3pes6"]
-[ext_resource type="Texture2D" uid="uid://c085oal6dr54i" path="res://images/3.png" id="2_dp1j2"]
+[ext_resource type="Texture2D" uid="uid://dj07r4ufvntkn" path="res://Image/winloose1.png" id="2_dp1j2"]
 [ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="3_dp1j2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w53m8"]
@@ -40,10 +40,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_w53m8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 455.0
-offset_top = 360.0
-offset_right = 709.0
-offset_bottom = 527.0
+offset_left = 450.0
+offset_top = 391.0
+offset_right = 704.0
+offset_bottom = 558.0
 theme_override_constants/separation = 32
 
 [node name="Button" type="Button" parent="Panel/VBoxContainer"]

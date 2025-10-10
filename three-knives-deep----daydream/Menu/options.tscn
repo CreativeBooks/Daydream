@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=3 uid="uid://bt71ccyu080e6"]
+
+[ext_resource type="Script" uid="uid://g2ifv17ogfsr" path="res://Menu/options.gd" id="1_47jak"]
+[ext_resource type="Texture2D" uid="uid://bum1to64tlwll" path="res://images/5ycaeP.jpg" id="2_aouwd"]
+[ext_resource type="FontFile" uid="uid://cptdqc2uo1o78" path="res://Assests/GolfClubHomicide-51azG.ttf" id="3_u2cfx"]
+[ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="4_kdkm0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_knagg"]
+texture = ExtResource("2_aouwd")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxwam"]
+bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.82163996, 0, 0.025397828, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sqal"]
+bg_color = Color(0.7792914, 0.7792914, 0.7792912, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsodp"]
+bg_color = Color(0.3366076, 0.33660764, 0.33660752, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_47jak")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1179.0
+offset_bottom = 680.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_knagg")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 146.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.45431703, 0, 0.13267961, 0.95686275)
+theme_override_constants/shadow_offset_x = 16
+theme_override_fonts/font = ExtResource("3_u2cfx")
+theme_override_font_sizes/font_size = 150
+text = "Options"
+horizontal_alignment = 1
+
+[node name="MusicButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -36.5
+offset_right = 150.0
+offset_bottom = 36.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_kdkm0")
+theme_override_font_sizes/font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_pxwam")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0sqal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bsodp")
+text = "Music Off"
+
+[node name="button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = 57.0
+offset_right = 152.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_kdkm0")
+theme_override_font_sizes/font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_pxwam")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0sqal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bsodp")
+text = "Back"
+
+[connection signal="pressed" from="MusicButton" to="." method="_on_Musicbutton_pressed"]
+[connection signal="pressed" from="button" to="." method="_on_button_pressed"]
