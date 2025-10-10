@@ -41,13 +41,13 @@ offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_e01xi")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 143.0
-offset_top = 188.0
-offset_right = 1390.0
-offset_bottom = 580.0
+offset_left = 111.0
+offset_top = 169.0
+offset_right = 1358.0
+offset_bottom = 561.0
 theme_override_colors/font_color = Color(0.9122707, 3.1766297e-06, 6.738305e-07, 1)
 theme_override_fonts/font = ExtResource("3_e01xi")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 22
 text = "                                                                    A low groan echoed through the shaft.
 
                                                                                       The lights flickered once—
