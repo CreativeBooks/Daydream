@@ -1,12 +1,14 @@
-[gd_scene load_steps=16 format=4 uid="uid://wekkcdbucth8"]
+[gd_scene load_steps=25 format=4 uid="uid://wekkcdbucth8"]
 
 [ext_resource type="Script" uid="uid://cn8p1i5n5s0ks" path="res://Level 1/3_main_menu.gd" id="1_espcj"]
 [ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="1_oqie6"]
 [ext_resource type="Texture2D" uid="uid://dq7s7j6c6iu56" path="res://images/background2.0.png" id="2_55rdi"]
 [ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="3_55rdi"]
 [ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="4_55rdi"]
-[ext_resource type="Texture2D" uid="uid://dwn10iohkvwsp" path="res://images/MCFINAL.png" id="4_sj0c3"]
 [ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="5_52xqc"]
+[ext_resource type="Texture2D" uid="uid://d1niphphmeqfi" path="res://images/pixil-layer-3.png" id="6_wl4tp"]
+[ext_resource type="Texture2D" uid="uid://dukgbcbq0uw3s" path="res://images/pixil-layer-1.png" id="7_27enq"]
+[ext_resource type="Texture2D" uid="uid://bipicc6kte276" path="res://images/MCspritesheet.png" id="9_3kco0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wl4tp"]
 texture = ExtResource("1_oqie6")
@@ -489,7 +491,67 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7asoi"]
-size = Vector2(71, 205.09375)
+size = Vector2(70, 182)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnhj8"]
+atlas = ExtResource("6_wl4tp")
+region = Rect2(0, 0, 240, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_te2o7"]
+atlas = ExtResource("7_27enq")
+region = Rect2(0, 0, 240, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jant"]
+atlas = ExtResource("6_wl4tp")
+region = Rect2(0, 0, 240, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52xqc"]
+atlas = ExtResource("9_3kco0")
+region = Rect2(330, 0, 330, 378)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmtln"]
+atlas = ExtResource("9_3kco0")
+region = Rect2(0, 0, 330, 378)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00oj6"]
+atlas = ExtResource("9_3kco0")
+region = Rect2(330, 0, 330, 378)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ojgo6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnhj8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_te2o7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jant")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52xqc")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmtln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00oj6")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kco0"]
 size = Vector2(131, 89)
@@ -497,7 +559,7 @@ size = Vector2(131, 89)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_espcj"]
 size = Vector2(5094, 51)
 
-[node name="Node" type="Node"]
+[node name="Node2" type="Node"]
 script = ExtResource("1_espcj")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -554,13 +616,8 @@ text = "Decision Time"
 script = ExtResource("3_55rdi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(360.5, 528.4531)
+position = Vector2(360, 540)
 shape = SubResource("RectangleShape2D_7asoi")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(360.99994, 529.99994)
-scale = Vector2(0.7291666, 0.66999996)
-texture = ExtResource("4_sj0c3")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(577, 349)
@@ -568,6 +625,12 @@ limit_left = 0
 limit_top = -90
 limit_right = 4968
 limit_bottom = 672
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(365, 527.00006)
+scale = Vector2(0.8166668, 0.76000005)
+sprite_frames = SubResource("SpriteFrames_ojgo6")
+animation = &"idle"
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2(-689, 0)

@@ -1,11 +1,13 @@
-[gd_scene load_steps=15 format=4 uid="uid://bpf5njcnytgp0"]
+[gd_scene load_steps=21 format=4 uid="uid://bpf5njcnytgp0"]
 
 [ext_resource type="Script" uid="uid://dfs2qrw77j3un" path="res://Level 1/riddle_1.gd" id="1_7gvdq"]
 [ext_resource type="Texture2D" uid="uid://dq7s7j6c6iu56" path="res://images/background2.0.png" id="2_7gvdq"]
 [ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="2_jujc4"]
 [ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="3_7gvdq"]
 [ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="3_7wvvt"]
-[ext_resource type="Texture2D" uid="uid://bda1kmxqcvt25" path="res://images/spritesheet-removebg-preview.png" id="5_7gvdq"]
+[ext_resource type="Texture2D" uid="uid://dukgbcbq0uw3s" path="res://images/pixil-layer-1.png" id="5_qnhj8"]
+[ext_resource type="Texture2D" uid="uid://d1niphphmeqfi" path="res://images/pixil-layer-3.png" id="6_8i3r5"]
+[ext_resource type="Texture2D" uid="uid://bipicc6kte276" path="res://images/MCspritesheet.png" id="8_fa0k0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wvvt"]
 texture = ExtResource("2_jujc4")
@@ -465,27 +467,65 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7wvvt")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
-size = Vector2(65, 194)
+size = Vector2(79, 184)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7wvvt"]
-atlas = ExtResource("5_7gvdq")
-region = Rect2(0, 0, 335, 372)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnhj8"]
+atlas = ExtResource("6_8i3r5")
+region = Rect2(0, 0, 240, 350)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tld1m"]
-atlas = ExtResource("5_7gvdq")
-region = Rect2(335, 0, 335, 372)
+[sub_resource type="AtlasTexture" id="AtlasTexture_te2o7"]
+atlas = ExtResource("5_qnhj8")
+region = Rect2(0, 0, 240, 350)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qnhj8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jant"]
+atlas = ExtResource("6_8i3r5")
+region = Rect2(0, 0, 240, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52xqc"]
+atlas = ExtResource("8_fa0k0")
+region = Rect2(330, 0, 330, 378)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmtln"]
+atlas = ExtResource("8_fa0k0")
+region = Rect2(0, 0, 330, 378)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00oj6"]
+atlas = ExtResource("8_fa0k0")
+region = Rect2(330, 0, 330, 378)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tld1m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7wvvt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tld1m")
+"texture": SubResource("AtlasTexture_qnhj8")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_te2o7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jant")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52xqc")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmtln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00oj6")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -533,7 +573,7 @@ position = Vector2(-11, -13)
 script = ExtResource("3_7gvdq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(88.5, 544)
+position = Vector2(90.5, 549)
 shape = SubResource("RectangleShape2D_4c57u")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -544,10 +584,10 @@ limit_right = 4933
 limit_bottom = 718
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(117, 503)
-sprite_frames = SubResource("SpriteFrames_qnhj8")
-frame = 1
-frame_progress = 0.32166746
+position = Vector2(93.99999, 538.00006)
+scale = Vector2(0.8166668, 0.76000005)
+sprite_frames = SubResource("SpriteFrames_tld1m")
+animation = &"idle"
 
 [node name="RespawnPoint" type="Marker2D" parent="."]
 position = Vector2(80, 561)
