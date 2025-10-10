@@ -61,23 +61,12 @@ text = "You are the owner of a hotel. Suddenly, you are given a notice to shut d
 autowrap_mode = 2
 script = ExtResource("4_xumgl")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = 124.0
-offset_right = 152.0
-offset_bottom = 270.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 10
-
-[node name="Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 448.0
+offset_right = 728.0
+offset_bottom = 516.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
@@ -90,8 +79,12 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bsg70")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g75mp")
 text = "Start Game"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 459.0
+offset_top = 532.0
+offset_right = 731.0
+offset_bottom = 599.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
@@ -104,5 +97,5 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bsg70")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g75mp")
 text = "Exit"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
