@@ -1,13 +1,14 @@
-[gd_scene load_steps=21 format=4 uid="uid://bajoc6eejc07n"]
+[gd_scene load_steps=22 format=4 uid="uid://bajoc6eejc07n"]
 
 [ext_resource type="Script" uid="uid://bjs42hija1wx6" path="res://Level 3/2_main_menu_l_3.gd" id="1_mckuq"]
 [ext_resource type="Texture2D" uid="uid://eawjrcom7o7m" path="res://images/wall3.png" id="2_mckuq"]
 [ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="3_j8yaw"]
 [ext_resource type="Script" uid="uid://bgpl3orits3fd" path="res://player.gd" id="4_rv6np"]
-[ext_resource type="Texture2D" uid="uid://d1niphphmeqfi" path="res://images/pixil-layer-3.png" id="5_uor2v"]
-[ext_resource type="Texture2D" uid="uid://dukgbcbq0uw3s" path="res://images/pixil-layer-1.png" id="6_qvx82"]
+[ext_resource type="Texture2D" uid="uid://m6no24cw635o" path="res://images/pixil-layer-3.png" id="5_uor2v"]
+[ext_resource type="Texture2D" uid="uid://de81pn31ypm5" path="res://images/pixil-layer-1.png" id="6_qvx82"]
 [ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="6_r03bi"]
 [ext_resource type="Texture2D" uid="uid://bipicc6kte276" path="res://images/MCspritesheet.png" id="7_q4xlq"]
+[ext_resource type="Texture2D" uid="uid://cjvjjalnqcaqo" path="res://Image/white-spikes-clipart-xl.png" id="9_qvx82"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4cwh"]
 texture = ExtResource("3_j8yaw")
@@ -467,7 +468,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_v4cwh")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqjxu"]
-size = Vector2(66, 193)
+size = Vector2(66, 169.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qnhj8"]
 atlas = ExtResource("5_uor2v")
@@ -493,7 +494,7 @@ region = Rect2(0, 0, 330, 378)
 atlas = ExtResource("7_q4xlq")
 region = Rect2(330, 0, 330, 378)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_c40od"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_uor2v"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -533,7 +534,7 @@ animations = [{
 size = Vector2(131, 89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mckuq"]
-size = Vector2(5552.5, 102)
+size = Vector2(5126, 102)
 
 [node name="Node" type="Node"]
 script = ExtResource("1_mckuq")
@@ -568,14 +569,14 @@ position = Vector2(305, 561)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)
-tile_map_data = PackedByteArray("AAAAAA0AAAAKAAcAAAAEAA0AAAAKAAcAAAAFAA0AAAAKAAcAAAAGAA0AAAAKAAcAAAAHAA0AAAAKAAcAAAAIAA0AAAAKAAcAAAABAA0AAAAKAAcAAAACAA0AAAAKAAcAAAADAA0AAAAKAAcAAAAAAA4AAAAKAAcAAAABAA4AAAAKAAcAAAACAA4AAAAKAAcAAAADAA4AAAAKAAcAAAAEAA4AAAAKAAcAAAAFAA4AAAAKAAcAAAAGAA4AAAAKAAcAAAAHAA4AAAAKAAcAAAAIAA4AAAAKAAcAAAALAAoAAAACAAMAAAALAAsAAAACAAMAAAARAAoAAAACAAMAAAARAAsAAAACAAMAAAAeAAoAAAALAAYAAAAeAAsAAAALAAcAAAAmAAoAAAALAAYAAAAmAAsAAAALAAcAAAA2AAoAAAALAAYAAAA2AAsAAAALAAcAAAA/AAoAAAALAAYAAAA/AAsAAAALAAcAAABGAAoAAAALAAYAAABGAAsAAAALAAcAAABOAAoAAAALAAYAAABOAAsAAAALAAcAAABzAAwAAAAHAAQAAABzAAoAAAAHAAQAAABzAAsAAAAHAAQAAABzAA0AAAAHAAQAAAByAA0AAAAHAAQAAABxAA0AAAAHAAQAAABwAA0AAAAHAAQAAABvAA0AAAAHAAQAAABuAA0AAAAHAAQAAABtAA0AAAAHAAQAAABsAA0AAAAHAAQAAABrAA0AAAAHAAQAAABqAA0AAAAHAAQAAABqAA4AAAAHAAQAAABpAA4AAAAHAAQAAABoAA4AAAAHAAQAAABnAA4AAAAHAAQAAABrAA4AAAAHAAQAAABsAA4AAAAHAAQAAABtAA4AAAAHAAQAAABuAA4AAAAHAAQAAABvAA4AAAAHAAQAAABwAA4AAAAHAAQAAABxAA4AAAAHAAQAAAByAA4AAAAHAAQAAABzAA4AAAAHAAQAAABnAA0AAAAHAAQAAABoAA0AAAAHAAQAAABpAA0AAAAHAAQAAABnAAsAAAAHAAQAAABnAAoAAAAHAAQAAABoAAoAAAAHAAQAAABpAAoAAAAHAAQAAABqAAoAAAAHAAQAAABrAAoAAAAHAAQAAABsAAoAAAAHAAQAAABtAAoAAAAHAAQAAABuAAoAAAAHAAQAAABvAAoAAAAHAAQAAABwAAoAAAAHAAQAAABxAAoAAAAHAAQAAAByAAoAAAAHAAQAAAByAAsAAAAHAAQAAAByAAwAAAAHAAQAAABxAAwAAAAHAAQAAABwAAwAAAAHAAQAAABvAAwAAAAHAAQAAABuAAwAAAAHAAQAAABtAAwAAAAHAAQAAABsAAwAAAAHAAQAAABrAAwAAAAHAAQAAABqAAwAAAAHAAQAAABpAAwAAAAHAAQAAABoAAwAAAAHAAQAAABnAAwAAAAHAAQAAABoAAsAAAAHAAQAAABpAAsAAAAHAAQAAABqAAsAAAAHAAQAAABrAAsAAAAHAAQAAABsAAsAAAAHAAQAAABtAAsAAAAHAAQAAABuAAsAAAAHAAQAAABvAAsAAAAHAAQAAABwAAsAAAAHAAQAAABxAAsAAAAHAAQAAABgAAoAAAAHAAQAAABgAAsAAAAHAAUAAAAWAAUAAAACAAYAAAAWAAYAAAACAAcAAAAxAAQAAAACAAYAAAAxAAUAAAACAAcAAABRAAUAAAACAAYAAABRAAYAAAACAAcAAABZAAkAAAACAAYAAABZAAoAAAACAAcAAABCAAQAAAACAAYAAABCAAUAAAACAAcAAAAiAAQAAAACAAYAAAAiAAUAAAACAAcAAABjAAUAAAACAAYAAABjAAYAAAACAAcAAAB1AP//AAAAAAAAAAB1AAAAAAAAAAAAAAB1AAEAAAAAAAAAAAB1AAIAAAAAAAAAAAB1AAMAAAAAAAAAAAB1AAQAAAAAAAAAAAB1AAUAAAAAAAAAAAB1AAYAAAAAAAAAAAB1AAcAAAAAAAAAAAB1AAgAAAAAAAAAAAB1AAkAAAAAAAAAAAB1AAoAAAAAAAAAAAB1AAsAAAAAAAAAAAB1AAwAAAAAAAAAAAB1AA0AAAAAAAAAAAB1AA4AAAAAAAAAAAB1AA8AAAAAAAAAAAB0AA4AAAAAAAAAAAB0AA0AAAAAAAAAAAB0AAwAAAAAAAAAAAB0AAsAAAAAAAAAAAB0AAoAAAAAAAAAAAB0AAkAAAAAAAAAAAB0AAgAAAAAAAAAAAB0AAcAAAAAAAAAAAB0AAYAAAAAAAAAAAB0AAUAAAAAAAAAAAB0AAQAAAAAAAAAAAB0AAMAAAAAAAAAAAB0AAIAAAAAAAAAAAB0AAEAAAAAAAAAAAB0AAAAAAAAAAAAAAB0AP//AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAA0AAAAKAAcAAAAEAA0AAAAKAAcAAAAFAA0AAAAKAAcAAAAGAA0AAAAKAAcAAAAHAA0AAAAKAAcAAAAIAA0AAAAKAAcAAAABAA0AAAAKAAcAAAACAA0AAAAKAAcAAAADAA0AAAAKAAcAAAAAAA4AAAAKAAcAAAABAA4AAAAKAAcAAAACAA4AAAAKAAcAAAADAA4AAAAKAAcAAAAEAA4AAAAKAAcAAAAFAA4AAAAKAAcAAAAGAA4AAAAKAAcAAAAHAA4AAAAKAAcAAAAIAA4AAAAKAAcAAAALAAoAAAACAAMAAAALAAsAAAACAAMAAAAeAAoAAAALAAYAAAAeAAsAAAALAAcAAAAmAAoAAAALAAYAAAAmAAsAAAALAAcAAAA2AAoAAAALAAYAAAA2AAsAAAALAAcAAABGAAoAAAALAAYAAABGAAsAAAALAAcAAABOAAoAAAALAAYAAABOAAsAAAALAAcAAABzAAwAAAAHAAQAAABzAAoAAAAHAAQAAABzAAsAAAAHAAQAAABzAA0AAAAHAAQAAAByAA0AAAAHAAQAAABxAA0AAAAHAAQAAABwAA0AAAAHAAQAAABvAA0AAAAHAAQAAABuAA0AAAAHAAQAAABtAA0AAAAHAAQAAABsAA0AAAAHAAQAAABrAA0AAAAHAAQAAABqAA0AAAAHAAQAAABqAA4AAAAHAAQAAABpAA4AAAAHAAQAAABoAA4AAAAHAAQAAABnAA4AAAAHAAQAAABrAA4AAAAHAAQAAABsAA4AAAAHAAQAAABtAA4AAAAHAAQAAABuAA4AAAAHAAQAAABvAA4AAAAHAAQAAABwAA4AAAAHAAQAAABxAA4AAAAHAAQAAAByAA4AAAAHAAQAAABzAA4AAAAHAAQAAABnAA0AAAAHAAQAAABoAA0AAAAHAAQAAABpAA0AAAAHAAQAAABnAAsAAAAHAAQAAABnAAoAAAAHAAQAAABoAAoAAAAHAAQAAABpAAoAAAAHAAQAAABqAAoAAAAHAAQAAABrAAoAAAAHAAQAAABsAAoAAAAHAAQAAABtAAoAAAAHAAQAAABuAAoAAAAHAAQAAABvAAoAAAAHAAQAAABwAAoAAAAHAAQAAABxAAoAAAAHAAQAAAByAAoAAAAHAAQAAAByAAsAAAAHAAQAAAByAAwAAAAHAAQAAABxAAwAAAAHAAQAAABwAAwAAAAHAAQAAABvAAwAAAAHAAQAAABuAAwAAAAHAAQAAABtAAwAAAAHAAQAAABsAAwAAAAHAAQAAABrAAwAAAAHAAQAAABqAAwAAAAHAAQAAABpAAwAAAAHAAQAAABoAAwAAAAHAAQAAABnAAwAAAAHAAQAAABoAAsAAAAHAAQAAABpAAsAAAAHAAQAAABqAAsAAAAHAAQAAABrAAsAAAAHAAQAAABsAAsAAAAHAAQAAABtAAsAAAAHAAQAAABuAAsAAAAHAAQAAABvAAsAAAAHAAQAAABwAAsAAAAHAAQAAABxAAsAAAAHAAQAAABgAAoAAAAHAAQAAABgAAsAAAAHAAUAAAAWAAUAAAACAAYAAAAWAAYAAAACAAcAAAAxAAQAAAACAAYAAAAxAAUAAAACAAcAAABRAAUAAAACAAYAAABRAAYAAAACAAcAAABjAAUAAAACAAYAAABjAAYAAAACAAcAAAB1AP//AAAAAAAAAAB1AAAAAAAAAAAAAAB1AAEAAAAAAAAAAAB1AAIAAAAAAAAAAAB1AAMAAAAAAAAAAAB1AAQAAAAAAAAAAAB1AAUAAAAAAAAAAAB1AAYAAAAAAAAAAAB1AAcAAAAAAAAAAAB1AAgAAAAAAAAAAAB1AAkAAAAAAAAAAAB1AAoAAAAAAAAAAAB1AAsAAAAAAAAAAAB1AAwAAAAAAAAAAAB1AA0AAAAAAAAAAAB1AA4AAAAAAAAAAAB1AA8AAAAAAAAAAAB0AA4AAAAAAAAAAAB0AA0AAAAAAAAAAAB0AAwAAAAAAAAAAAB0AAsAAAAAAAAAAAB0AAoAAAAAAAAAAAB0AAkAAAAAAAAAAAB0AAgAAAAAAAAAAAB0AAcAAAAAAAAAAAB0AAYAAAAAAAAAAAB0AAUAAAAAAAAAAAB0AAQAAAAAAAAAAAB0AAMAAAAAAAAAAAB0AAIAAAAAAAAAAAB0AAEAAAAAAAAAAAB0AAAAAAAAAAAAAAB0AP//AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_bdhm5")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("4_rv6np")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(315, 526)
+position = Vector2(315, 537.75)
 shape = SubResource("RectangleShape2D_lqjxu")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -586,9 +587,9 @@ limit_right = 5563
 limit_bottom = 672
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(314.00003, 528.00006)
-scale = Vector2(0.8166668, 0.76000005)
-sprite_frames = SubResource("SpriteFrames_c40od")
+position = Vector2(317, 541)
+scale = Vector2(0.66250014, 0.61714274)
+sprite_frames = SubResource("SpriteFrames_uor2v")
 animation = &"idle"
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -664,8 +665,198 @@ metadata/_edit_use_anchors_ = true
 [node name="2L3" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2L3"]
-position = Vector2(2784.75, 770)
+position = Vector2(2992, 727)
 shape = SubResource("RectangleShape2D_mckuq")
+
+[node name="WhiteSpikesClipartXl39" type="Sprite2D" parent="."]
+position = Vector2(492, 637)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl40" type="Sprite2D" parent="."]
+position = Vector2(614, 637)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl41" type="Sprite2D" parent="."]
+position = Vector2(733, 637)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl42" type="Sprite2D" parent="."]
+position = Vector2(854, 635)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl43" type="Sprite2D" parent="."]
+position = Vector2(976.99994, 635)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl44" type="Sprite2D" parent="."]
+position = Vector2(1099, 636)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl45" type="Sprite2D" parent="."]
+position = Vector2(1217.9999, 633)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl46" type="Sprite2D" parent="."]
+position = Vector2(1334, 635)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl47" type="Sprite2D" parent="."]
+position = Vector2(1455, 638)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl48" type="Sprite2D" parent="."]
+position = Vector2(1574.9999, 637)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl49" type="Sprite2D" parent="."]
+position = Vector2(1695, 635.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl50" type="Sprite2D" parent="."]
+position = Vector2(1817, 635.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl51" type="Sprite2D" parent="."]
+position = Vector2(1936, 635.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl52" type="Sprite2D" parent="."]
+position = Vector2(2057, 633.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl53" type="Sprite2D" parent="."]
+position = Vector2(2180, 633.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl54" type="Sprite2D" parent="."]
+position = Vector2(2302, 634.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl55" type="Sprite2D" parent="."]
+position = Vector2(2421, 631.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl56" type="Sprite2D" parent="."]
+position = Vector2(2537, 633.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl57" type="Sprite2D" parent="."]
+position = Vector2(2658, 636.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl58" type="Sprite2D" parent="."]
+position = Vector2(2778, 635.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl59" type="Sprite2D" parent="."]
+position = Vector2(2895, 637)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl60" type="Sprite2D" parent="."]
+position = Vector2(3015, 636)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl61" type="Sprite2D" parent="."]
+position = Vector2(3135, 634.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl62" type="Sprite2D" parent="."]
+position = Vector2(3257, 634.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl63" type="Sprite2D" parent="."]
+position = Vector2(3376, 634.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl64" type="Sprite2D" parent="."]
+position = Vector2(3497, 632.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl65" type="Sprite2D" parent="."]
+position = Vector2(3620, 632.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl66" type="Sprite2D" parent="."]
+position = Vector2(3742, 633.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl67" type="Sprite2D" parent="."]
+position = Vector2(3861, 630.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl68" type="Sprite2D" parent="."]
+position = Vector2(3977, 632.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl69" type="Sprite2D" parent="."]
+position = Vector2(4098, 635.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl70" type="Sprite2D" parent="."]
+position = Vector2(4218, 634.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl71" type="Sprite2D" parent="."]
+position = Vector2(4338, 635)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl72" type="Sprite2D" parent="."]
+position = Vector2(4458, 634)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl73" type="Sprite2D" parent="."]
+position = Vector2(4578, 635.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl74" type="Sprite2D" parent="."]
+position = Vector2(4700, 636.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl75" type="Sprite2D" parent="."]
+position = Vector2(4819, 636.25)
+scale = Vector2(0.06354171, 0.061875463)
+texture = ExtResource("9_qvx82")
+
+[node name="WhiteSpikesClipartXl76" type="Sprite2D" parent="."]
+position = Vector2(4896, 635)
+scale = Vector2(0.05208321, 0.061875463)
+texture = ExtResource("9_qvx82")
 
 [connection signal="pressed" from="Area2D/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="2L3" to="Player" method="_on_2_l_3_body_entered"]
