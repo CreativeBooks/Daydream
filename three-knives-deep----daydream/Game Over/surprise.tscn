@@ -41,10 +41,10 @@ offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_e01xi")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 111.0
-offset_top = 169.0
-offset_right = 1358.0
-offset_bottom = 561.0
+offset_left = 74.0
+offset_top = 100.0
+offset_right = 1321.0
+offset_bottom = 492.0
 theme_override_colors/font_color = Color(0.9122707, 3.1766297e-06, 6.738305e-07, 1)
 theme_override_fonts/font = ExtResource("3_e01xi")
 theme_override_font_sizes/font_size = 22
@@ -56,7 +56,9 @@ text = "                                                                    A lo
 
                          Screams were cut short by the sound of metal folding in on itself.
 
-                                                                                    Silence followed. Cold. Final."
+                                                                                    Silence followed. Cold. Final.
+                                         
+                                          Your hotel's reputation tarnished. Broken. Destroyed."
 script = ExtResource("3_k5cb2")
 
 [node name="Button" type="Button" parent="."]

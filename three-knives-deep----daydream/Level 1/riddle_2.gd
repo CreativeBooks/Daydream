@@ -8,5 +8,6 @@ func _on_button_pressed():
 func _on_area_2d_body_entered(body: Node2D):
 	if body.name == "Player": 
 		button.visible = true
-		
+
+
 		

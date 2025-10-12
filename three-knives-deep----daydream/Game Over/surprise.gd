@@ -1,13 +1,17 @@
 extends Label
 
 @export var text_to_show: String = "
-                                                                A low groan echoed through the shaft.
+                                                                    A low groan echoed through the shaft.
 							
-                                              The lights flickered once—Then the elevator dropped.
+                                                                                         The lights flickered once—
+										
+                                                                                         Then the elevator dropped.
 					
-                    	    Screams were cut short by the sound of metal folding in on itself. 
+                    	           Screams were cut short by the sound of metal folding in on itself. 
 					
-                                                                             Silence followed. Cold. Final.
+                                                                                    Silence followed. Cold. Final.
+                                     
+                                             Your hotel's reputation tarnished. Broken. Destroyed.
 								"
 @export var speed: float = 0.025 
 
