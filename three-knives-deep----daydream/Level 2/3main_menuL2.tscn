@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bj5jxrcb1nntt"]
+[gd_scene load_steps=27 format=4 uid="uid://bj5jxrcb1nntt"]
 
 [ext_resource type="Script" uid="uid://dxs2g2a678irp" path="res://Level 2/3_main_menu_l_2.gd" id="1_xp8x5"]
 [ext_resource type="Texture2D" uid="uid://bbfarv1y1p87y" path="res://images/wall2.png" id="2_xp8x5"]
@@ -468,6 +468,9 @@ texture = ExtResource("3_w2k56")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wl4tp")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbe7w"]
+size = Vector2(148, 80)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55rdi"]
 bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
 corner_radius_top_left = 16
@@ -596,11 +599,19 @@ scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAAAA0AAAAKAAcAAAAEAA0AAAAKAAcAAAAFAA0AAAAKAAcAAAAGAA0AAAAKAAcAAAAHAA0AAAAKAAcAAAAIAA0AAAAKAAcAAAAJAA0AAAAKAAcAAAABAA0AAAAKAAcAAAACAA0AAAAKAAcAAAADAA0AAAAKAAcAAAAAAA4AAAAKAAcAAAABAA4AAAAKAAcAAAACAA4AAAAKAAcAAAADAA4AAAAKAAcAAAAEAA4AAAAKAAcAAAAFAA4AAAAKAAcAAAAGAA4AAAAKAAcAAAAHAA4AAAAKAAcAAAAIAA4AAAAKAAcAAAAJAA4AAAAKAAcAAAALAAoAAAACAAMAAAATAAgAAAACAAMAAAAZAAQAAAACAAMAAAAOAAQAAAACAAMAAAAqAAYAAAAJAAUAAAAwAAUAAAAJAAUAAAA8AAUAAAAJAAUAAABDAAUAAAAJAAUAAABPAAgAAAAJAAUAAABaAAUAAAAJAAUAAABLAAMAAAAJAAUAAAAmAAQAAAAJAAUAAABkAAgAAAAJAAUAAABpAA4AAAAJAAUAAABqAA4AAAAJAAUAAABrAA4AAAAJAAUAAABsAA4AAAAJAAUAAABtAA4AAAAJAAUAAABuAA4AAAAJAAUAAABvAA4AAAAJAAUAAABwAA4AAAAJAAUAAABxAA4AAAAJAAUAAAByAA4AAAAJAAUAAAByAAwAAAAJAAUAAAByAAsAAAAJAAUAAABxAAsAAAAJAAUAAABwAAsAAAAJAAUAAABvAAsAAAAJAAUAAABuAAsAAAAJAAUAAABtAAsAAAAJAAUAAABsAAsAAAAJAAUAAABrAAsAAAAJAAUAAABqAAsAAAAJAAUAAABpAAsAAAAJAAUAAABoAAsAAAAJAAUAAABoAAwAAAAJAAUAAABoAA0AAAAJAAUAAABpAA0AAAAJAAUAAABqAA0AAAAJAAUAAABrAA0AAAAJAAUAAABsAA0AAAAJAAUAAABpAAwAAAAJAAUAAABqAAwAAAAJAAUAAABrAAwAAAAJAAUAAABsAAwAAAAJAAUAAABtAAwAAAAJAAUAAABuAAwAAAAJAAUAAABvAAwAAAAJAAUAAABwAAwAAAAJAAUAAABxAAwAAAAJAAUAAABxAA0AAAAJAAUAAABwAA0AAAAJAAUAAABvAA0AAAAJAAUAAABuAA0AAAAJAAUAAABtAA0AAAAJAAUAAABoAA4AAAAJAAUAAAByAA0AAAAJAAUAAABzAP3/AAAAAAAAAABzAP7/AAAAAAAAAAB0AP7/AAAAAAAAAAB0AP//AAAAAAAAAAB0AAAAAAAAAAAAAAB0AAEAAAAAAAAAAAB0AAIAAAAAAAAAAAB0AAMAAAAAAAAAAAB0AAQAAAAAAAAAAAB0AAUAAAAAAAAAAAB0AAYAAAAAAAAAAAB0AAcAAAAAAAAAAAB0AAgAAAAAAAAAAAB0AAkAAAAAAAAAAAB0AAoAAAAAAAAAAAB0AAsAAAAAAAAAAAB0AAwAAAAAAAAAAAB0AA0AAAAAAAAAAAB0AA4AAAAAAAAAAABzAA4AAAAAAAAAAABzAA0AAAAAAAAAAABzAAwAAAAAAAAAAABzAAsAAAAAAAAAAABzAAoAAAAAAAAAAABzAAkAAAAAAAAAAABzAAgAAAAAAAAAAABzAAcAAAAAAAAAAABzAAYAAAAAAAAAAABzAAUAAAAAAAAAAABzAAQAAAAAAAAAAABzAAMAAAAAAAAAAABzAAAAAAAAAAAAAABzAP//AAAAAAAAAAB0AP3/AAAAAAAAAABzAAEAAAAAAAAAAABzAAIAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_27enq")
 
-[node name="Button2" type="Button" parent="."]
-offset_left = 5188.0
-offset_top = 440.0
-offset_right = 5383.0
-offset_bottom = 496.0
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(4818, 314)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 15)
+shape = SubResource("RectangleShape2D_kbe7w")
+
+[node name="Button2" type="Button" parent="Area2D"]
+visible = false
+offset_left = 339.0
+offset_top = 121.0
+offset_right = 534.0
+offset_bottom = 177.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.99921054, 0.96507806, 0.96099454, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
@@ -658,15 +669,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -130.0
-offset_top = -76.0
-offset_right = 128.0
-offset_bottom = 49.0
+offset_left = -81.5
+offset_top = -91.0
+offset_right = 84.5
+offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.023529412, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-text = "Click Me for Your Second Riddle!!!"
+theme_override_colors/font_color = Color(0.40390328, 8.4228816e-07, 9.62615e-08, 1)
+theme_override_fonts/font = ExtResource("4_rwl62")
+theme_override_font_sizes/font_size = 44
+text = "Click Me!!!"
 
 [node name="3L2" type="Area2D" parent="."]
 
@@ -849,6 +861,7 @@ position = Vector2(4943.5, 618.25)
 scale = Vector2(0.054687522, 0.061875463)
 texture = ExtResource("10_kbe7w")
 
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2dl23_body_entered"]
+[connection signal="pressed" from="Area2D/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Area2D2/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="3L2" to="Player" method="_on_3_l_2_body_entered"]

@@ -1,18 +1,14 @@
 extends Node
 
-
+@onready var player = $Player
+@onready var button = $Area2D/Button
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Level 1/Riddle_1.tscn")
 	
-@onready var player = $Player
-@onready var button = $ElevatorArea/ProximityButton
-@onready var area = $ElevatorArea
-@export var trigger_distance: float = 100.0  # Change as needed
 
-func _process(_delta):
-	if player and area and button:
-		var distance = player.global_position.distance_to(button.global_position)
-		button.visible = distance <= trigger_distance
-
-	
+func _on_area_2dl12_body_entered(body: Node2D):
+	if body.name == "Player": 
+		button.visible = true
+		
+		

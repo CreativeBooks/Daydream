@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://cpcdrcumjbnv5"]
+[gd_scene load_steps=23 format=4 uid="uid://cpcdrcumjbnv5"]
 
 [ext_resource type="Script" uid="uid://c8qspfar2588g" path="res://Level 2/2_main_menu_l_2.gd" id="1_4dj3y"]
 [ext_resource type="Texture2D" uid="uid://bbfarv1y1p87y" path="res://images/wall2.png" id="2_4dj3y"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://de81pn31ypm5" path="res://images/pixil-layer-1.png" id="6_nb7u3"]
 [ext_resource type="Texture2D" uid="uid://djs8d1lvl6avw" path="res://Level 1/Screenshot 2025-09-27 200713.png" id="6_pi6bq"]
 [ext_resource type="Texture2D" uid="uid://bipicc6kte276" path="res://images/MCspritesheet.png" id="7_f48tp"]
+[ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="9_f48tp"]
 [ext_resource type="Texture2D" uid="uid://cjvjjalnqcaqo" path="res://Image/white-spikes-clipart-xl.png" id="9_nb7u3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4cwh"]
@@ -531,7 +532,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1u4gb"]
-size = Vector2(131, 89)
+size = Vector2(279.625, 163.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dj3y"]
 size = Vector2(4460, 121)
@@ -591,17 +592,18 @@ sprite_frames = SubResource("SpriteFrames_hmpbb")
 animation = &"idle"
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(3929, -65)
+position = Vector2(4317, 227)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(824.5, 565.5)
+position = Vector2(6, -36)
 shape = SubResource("RectangleShape2D_1u4gb")
 
 [node name="Button" type="Button" parent="Area2D"]
-offset_left = 759.0
-offset_top = 517.0
-offset_right = 896.0
-offset_bottom = 613.0
+visible = false
+offset_left = 377.0
+offset_top = 224.0
+offset_right = 514.0
+offset_bottom = 320.0
 icon = ExtResource("6_pi6bq")
 autowrap_trim_flags = 0
 expand_icon = true
@@ -614,16 +616,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -130.0
-offset_top = -76.0
-offset_right = 128.0
-offset_bottom = 49.0
+offset_left = -84.5
+offset_top = -89.0
+offset_right = 85.5
+offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.023529412, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-text = "Click Me for Your Second Riddle!!!"
-metadata/_edit_use_anchors_ = true
+theme_override_colors/font_color = Color(0.4554031, 1.0769255e-06, 2.1658838e-07, 1)
+theme_override_fonts/font = ExtResource("9_f48tp")
+theme_override_font_sizes/font_size = 44
+text = "Click Me!!!"
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2(-689, 0)
@@ -649,16 +651,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -119.0
-offset_top = -76.0
-offset_right = 117.0
-offset_bottom = 49.0
+offset_left = -73.5
+offset_top = -91.0
+offset_right = 106.0
+offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.023529412, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-text = "Click Me for Your First Riddle!!!"
-metadata/_edit_use_anchors_ = true
+theme_override_colors/font_color = Color(0.4554031, 1.0769255e-06, 2.1658838e-07, 1)
+theme_override_fonts/font = ExtResource("9_f48tp")
+theme_override_font_sizes/font_size = 44
+text = "Click Me!!!"
 
 [node name="RespawnPoint" type="Marker2D" parent="."]
 position = Vector2(305, 560)
@@ -829,5 +831,6 @@ position = Vector2(4503, 643)
 scale = Vector2(0.06250022, 0.061875463)
 texture = ExtResource("9_nb7u3")
 
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2dl22_body_entered"]
 [connection signal="pressed" from="Area2D/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="2L2" to="Player" method="_on_2_l_2_body_entered"]

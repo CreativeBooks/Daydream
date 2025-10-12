@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bf5i66b7iyk4h"]
+[gd_scene load_steps=23 format=4 uid="uid://bf5i66b7iyk4h"]
 
 [ext_resource type="Texture2D" uid="uid://8t774tfti2l7" path="res://Level 1/Black.png.webp" id="1_v4cwh"]
 [ext_resource type="Script" uid="uid://8wguovq3e762" path="res://Level 1/riddle_2.gd" id="1_wb680"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://m6no24cw635o" path="res://images/pixil-layer-3.png" id="5_kp8pn"]
 [ext_resource type="Texture2D" uid="uid://de81pn31ypm5" path="res://images/pixil-layer-1.png" id="6_14ki7"]
 [ext_resource type="Texture2D" uid="uid://bipicc6kte276" path="res://images/MCspritesheet.png" id="8_tn1r3"]
+[ext_resource type="FontFile" uid="uid://bl8cp2t8yssbg" path="res://Assests/Jacquard24-Regular.ttf" id="9_14ki7"]
 [ext_resource type="Texture2D" uid="uid://cjvjjalnqcaqo" path="res://Image/white-spikes-clipart-xl.png" id="9_kp8pn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4cwh"]
@@ -531,7 +532,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1u4gb"]
-size = Vector2(131, 89)
+size = Vector2(233, 138.46875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4cwh"]
 size = Vector2(4617, 111.5)
@@ -593,17 +594,18 @@ sprite_frames = SubResource("SpriteFrames_1u4gb")
 animation = &"idle"
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(4024, -105)
+position = Vector2(4182, 296)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(824.5, 565.5)
+position = Vector2(13, -1.234375)
 shape = SubResource("RectangleShape2D_1u4gb")
 
 [node name="Button" type="Button" parent="Area2D"]
-offset_left = 759.0
-offset_top = 517.0
-offset_right = 896.0
-offset_bottom = 613.0
+visible = false
+offset_left = 552.0
+offset_top = 88.0
+offset_right = 689.0
+offset_bottom = 184.0
 icon = ExtResource("3_1u4gb")
 autowrap_trim_flags = 0
 expand_icon = true
@@ -616,25 +618,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -130.0
-offset_top = -76.0
-offset_right = 128.0
-offset_bottom = 49.0
+offset_left = -86.5
+offset_top = -88.0
+offset_right = 82.5
+offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.023529412, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-text = "Click Me for Your Second Riddle!!!"
-metadata/_edit_use_anchors_ = true
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_14ki7")
+theme_override_font_sizes/font_size = 44
+text = "Click Me!!"
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2(-700, 10)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(824.5, 565.5)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(785, 552)
 shape = SubResource("RectangleShape2D_1u4gb")
 
-[node name="Button" type="Button" parent="Area2D2"]
+[node name="last_level" type="Button" parent="Area2D2"]
 offset_left = 759.0
 offset_top = 517.0
 offset_right = 896.0
@@ -644,23 +646,23 @@ autowrap_trim_flags = 0
 expand_icon = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="Area2D2/Button"]
+[node name="Label" type="Label" parent="Area2D2/last_level"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -119.0
-offset_top = -76.0
-offset_right = 117.0
-offset_bottom = 49.0
+offset_left = -82.5
+offset_top = -88.0
+offset_right = 92.5
+offset_bottom = 37.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.023529412, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-text = "Click Me for Your First Riddle!!!"
-metadata/_edit_use_anchors_ = true
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_14ki7")
+theme_override_font_sizes/font_size = 44
+text = "Click Me!!!"
 
 [node name="2L1" type="Area2D" parent="."]
 
@@ -823,5 +825,6 @@ position = Vector2(4355.0005, 632)
 scale = Vector2(0.068749994, 0.061875463)
 texture = ExtResource("9_kp8pn")
 
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="Area2D/Button" to="." method="_on_button_pressed"]
 [connection signal="body_entered" from="2L1" to="Player" method="_on_2_l_1_body_entered"]
