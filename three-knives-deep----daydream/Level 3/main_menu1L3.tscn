@@ -575,10 +575,10 @@ tile_map_data = PackedByteArray("AAAAAA0AAAAKAAcAAAAEAA0AAAAKAAcAAAAFAA0AAAAKAAc
 tile_set = SubResource("TileSet_qnhj8")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 57.0
-offset_top = -17.0
-offset_right = 1012.0
-offset_bottom = 291.0
+offset_left = 52.0
+offset_top = 44.0
+offset_right = 1007.0
+offset_bottom = 352.0
 theme_override_colors/font_color = Color(0.64887744, 0.06703611, 0.1364108, 1)
 theme_override_fonts/font = ExtResource("11_27bhu")
 theme_override_font_sizes/font_size = 176
